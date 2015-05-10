@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="proxima_nova_reg.ttf">
+            <string>ProximaNova-Regular</string>
+            <string>ProximaNova-Regular</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="AnnouncementDetailCell" rowHeight="115" id="cDh-9s-IE9" userLabel="FeedDetailCell" customClass="AnnouncementDetailCell" customModule="News_Feed_Test" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="400" height="104"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cDh-9s-IE9" id="PYW-pP-e3w">
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card-white" translatesAutoresizingMaskIntoConstraints="NO" id="KB8-iT-J2d">
+                        <rect key="frame" x="10" y="10" width="380" height="101"/>
+                    </imageView>
+                    <view contentMode="scaleToFill" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="Vf8-Di-ZAm" userLabel="Container View">
+                        <rect key="frame" x="12" y="12" width="376" height="91"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IPa-pg-9Lc" userLabel="Top Background View">
+                                <rect key="frame" x="0.0" y="0.0" width="376" height="50"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder-avatar" translatesAutoresizingMaskIntoConstraints="NO" id="4cX-zr-nfq">
+                                        <rect key="frame" x="12" y="12" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="dou-ne-QUC"/>
+                                            <constraint firstAttribute="width" constant="30" id="z03-us-Qw0"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="751" verticalHuggingPriority="751" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Mr. Howard to P5 English" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WNj-rx-UEh">
+                                        <rect key="frame" x="50" y="9" width="314" height="18"/>
+                                        <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="15"/>
+                                        <color key="textColor" red="0.1529411765" green="0.41960784309999999" blue="0.69019607839999997" alpha="1" colorSpace="deviceRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="750" text="Yesterday" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ob-xw-vRM">
+                                        <rect key="frame" x="50" y="28" width="314" height="15"/>
+                                        <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="13"/>
+                                        <color key="textColor" red="0.4941176471" green="0.52941176469999995" blue="0.60784313729999995" alpha="1" colorSpace="deviceRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="1ob-xw-vRM" firstAttribute="top" secondItem="WNj-rx-UEh" secondAttribute="bottom" constant="1" id="5Gg-g1-JtU"/>
+                                    <constraint firstItem="4cX-zr-nfq" firstAttribute="top" secondItem="IPa-pg-9Lc" secondAttribute="top" constant="12" id="GSp-O8-Xpy"/>
+                                    <constraint firstItem="1ob-xw-vRM" firstAttribute="leading" secondItem="4cX-zr-nfq" secondAttribute="trailing" constant="8" id="HCa-9p-bOH"/>
+                                    <constraint firstItem="WNj-rx-UEh" firstAttribute="leading" secondItem="4cX-zr-nfq" secondAttribute="trailing" constant="8" id="Ju1-Kl-XzW"/>
+                                    <constraint firstAttribute="trailing" secondItem="WNj-rx-UEh" secondAttribute="trailing" constant="12" id="K38-S7-b92"/>
+                                    <constraint firstItem="4cX-zr-nfq" firstAttribute="leading" secondItem="IPa-pg-9Lc" secondAttribute="leading" constant="12" id="RXt-wU-KPC"/>
+                                    <constraint firstAttribute="bottom" secondItem="1ob-xw-vRM" secondAttribute="bottom" constant="7" id="hS8-0k-B4j"/>
+                                    <constraint firstItem="WNj-rx-UEh" firstAttribute="top" secondItem="IPa-pg-9Lc" secondAttribute="top" constant="9" id="opg-uh-Ff6"/>
+                                    <constraint firstItem="1ob-xw-vRM" firstAttribute="leading" secondItem="4cX-zr-nfq" secondAttribute="trailing" constant="8" id="v3L-Y4-uxB"/>
+                                    <constraint firstAttribute="trailing" secondItem="1ob-xw-vRM" secondAttribute="trailing" constant="12" id="yho-7j-T87"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="751" verticalHuggingPriority="751" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Parent-teacher conference this Friday. " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PJI-Vo-ZmM">
+                                <rect key="frame" x="12" y="58" width="352" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.32549019607843138" green="0.41960784313725491" blue="0.51764705882352935" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="PJI-Vo-ZmM" secondAttribute="bottom" constant="16" id="0zO-90-xeA"/>
+                            <constraint firstItem="IPa-pg-9Lc" firstAttribute="leading" secondItem="Vf8-Di-ZAm" secondAttribute="leading" id="Hmh-pA-WhI"/>
+                            <constraint firstAttribute="trailing" secondItem="PJI-Vo-ZmM" secondAttribute="trailing" constant="12" id="Og4-tP-ar6"/>
+                            <constraint firstItem="PJI-Vo-ZmM" firstAttribute="top" secondItem="IPa-pg-9Lc" secondAttribute="bottom" constant="8" id="QtG-0W-pRg"/>
+                            <constraint firstItem="IPa-pg-9Lc" firstAttribute="top" secondItem="Vf8-Di-ZAm" secondAttribute="top" id="ebv-89-9Ad"/>
+                            <constraint firstItem="PJI-Vo-ZmM" firstAttribute="leading" secondItem="Vf8-Di-ZAm" secondAttribute="leading" constant="12" id="fG9-Zr-5pK"/>
+                            <constraint firstAttribute="trailing" secondItem="IPa-pg-9Lc" secondAttribute="trailing" id="yra-jR-6ao"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="KB8-iT-J2d" secondAttribute="bottom" constant="-8" id="23B-UK-PSl"/>
+                    <constraint firstItem="Vf8-Di-ZAm" firstAttribute="top" secondItem="PYW-pP-e3w" secondAttribute="top" constant="12" id="2n6-sK-ySA"/>
+                    <constraint firstAttribute="bottom" secondItem="Vf8-Di-ZAm" secondAttribute="bottom" id="Lji-9p-gnO"/>
+                    <constraint firstItem="KB8-iT-J2d" firstAttribute="top" secondItem="PYW-pP-e3w" secondAttribute="top" constant="10" id="QD5-M7-SN8"/>
+                    <constraint firstAttribute="trailing" secondItem="Vf8-Di-ZAm" secondAttribute="trailing" constant="12" id="VUh-ma-HPw"/>
+                    <constraint firstAttribute="trailing" secondItem="KB8-iT-J2d" secondAttribute="trailing" constant="10" id="dNP-oQ-2EN"/>
+                    <constraint firstItem="Vf8-Di-ZAm" firstAttribute="leading" secondItem="PYW-pP-e3w" secondAttribute="leading" constant="12" id="hdJ-9f-9f5"/>
+                    <constraint firstItem="KB8-iT-J2d" firstAttribute="leading" secondItem="PYW-pP-e3w" secondAttribute="leading" constant="10" id="pOd-bL-3rR"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="bottomOutlineConstraint" destination="23B-UK-PSl" id="PNL-2v-Eqk"/>
+                <outlet property="containerView" destination="Vf8-Di-ZAm" id="6xt-gm-du4"/>
+                <outlet property="dateLabel" destination="1ob-xw-vRM" id="0vh-Je-kGS"/>
+                <outlet property="lastVerticalConstraint" destination="Lji-9p-gnO" id="Ubm-rK-qlO"/>
+                <outlet property="teacherProfileImageView" destination="4cX-zr-nfq" id="Ri5-4h-PhM"/>
+                <outlet property="theAnnouncementLabel" destination="PJI-Vo-ZmM" id="R0k-vh-jqW"/>
+                <outlet property="titleLabel" destination="WNj-rx-UEh" id="ov1-u3-i4L"/>
+            </connections>
+            <point key="canvasLocation" x="205" y="15"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="card-white" width="9" height="9"/>
+        <image name="placeholder-avatar" width="55" height="55"/>
+    </resources>
+</document>
