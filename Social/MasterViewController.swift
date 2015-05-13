@@ -12,10 +12,10 @@ enum TabBarItemIndex:Int
 {
     case FeedIndex          = 0
     case GroupIndex         = 1
-    case SettingsIndex      = 2
+    case ProfileIndex      = 2
     
-    static let allValues    = [FeedIndex, GroupIndex, SettingsIndex]
-    static let nameValues   = ["Feed", "Groups", "Settings"]
+    static let allValues    = [FeedIndex, GroupIndex, ProfileIndex]
+    static let nameValues   = ["Feed", "Groups", "Profile"]
 }
 
 enum UserNuxSeenStatus:String
@@ -61,7 +61,7 @@ class MasterViewController: UITabBarController, UITabBarDelegate
         self.setupRootViewControllersAndTabs(forTitles: [
             NSLocalizedString("Feed", comment: "Feed tab bar item"),
             NSLocalizedString("Groups", comment: "Group tab bar item"),
-            NSLocalizedString("Settings", comment: "Group tab bar item")])
+            NSLocalizedString("Profile", comment: "Profile tab bar item")])
     }
     
     func setupRootViewControllersAndTabs(let forTitles titles:[String])
@@ -112,10 +112,10 @@ private extension MasterViewController
         navController.navigationBar.translucent     = false
         
         // Add Rightbarbutton Item
-        let navpost = UIImage(named: "navpost")
-        let settingsButton = UIBarButtonItem(image: navpost, style: UIBarButtonItemStyle.Plain, target: self, action: "openPosting:")
-        vc.navigationItem.rightBarButtonItem = settingsButton
-        
+        let navpost = UIImage(named: "navbar-settings")
+        let settingsButton = UIBarButtonItem(image: navpost, style: UIBarButtonItemStyle.Plain, target: self, action: "openSettings:")
+        vc.navigationItem.leftBarButtonItem = settingsButton
+       
         return navController
     }
     
@@ -152,10 +152,10 @@ private extension MasterViewController
             
             return navController
 
-        case .SettingsIndex:
+        case .ProfileIndex:
             // create announcements
-            let storyboard = UIStoryboard(name: "TableViewController", bundle: nil)
-            let vc = storyboard.instantiateViewControllerWithIdentifier("TableViewController") as! UITableViewController
+            let storyboard = UIStoryboard(name: "ProfileVC", bundle: nil)
+            let vc = storyboard.instantiateViewControllerWithIdentifier("ProfileVC") as! UIViewController
             self.presentViewController(vc, animated: true, completion: nil)
             
             let navController                           = UINavigationController(rootViewController: vc)
@@ -163,8 +163,7 @@ private extension MasterViewController
             
             return navController
         }
-        
-        return controller
+    
     }
     // finally we begin loading the information for the main view of the app
     func _loadMainView()
@@ -175,11 +174,9 @@ private extension MasterViewController
 }
 
 // Open Nav RightbarButtonItems
-func openPosting(sender: UIBarButtonItem?)
+func openSettings(sender: UIBarButtonItem?)
 {
-    
     println("Posting Soon Here")
-    
 }
 
 
@@ -201,7 +198,7 @@ extension MasterViewController : UITabBarControllerDelegate
                         break
                     case .GroupIndex:
                         break
-                    case .SettingsIndex:
+                    case .ProfileIndex:
                         break
                     }
                 }

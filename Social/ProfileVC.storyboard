@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="proxima_nova_reg.ttf">
+            <string>ProximaNova-Regular</string>
+        </mutableArray>
+    </customFonts>
+    <scenes>
+        <!--ProfileVC-->
+        <scene sceneID="Qvq-Sf-Mu7">
+            <objects>
+                <viewController storyboardIdentifier="ProfileVC" id="qxI-Do-LoM" customClass="ProfileVC" customModule="Social" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wHp-ih-wew"/>
+                        <viewControllerLayoutGuide type="bottom" id="yP8-oE-Uxr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gus-hQ-gky">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="D1V-aL-Nw7">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewLayout key="collectionViewLayout" id="iwN-de-RWp" customClass="ProgileHeaderLayout" customModule="Social"/>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="kReusableCollectionViewCell1" id="8de-th-cdb">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cell 1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CcN-5Y-0HG">
+                                                    <rect key="frame" x="18" y="9" width="169" height="32"/>
+                                                    <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="20"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <size key="customSize" width="600" height="50"/>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="qxI-Do-LoM" id="fzP-k9-Jmd"/>
+                                    <outlet property="delegate" destination="qxI-Do-LoM" id="ocb-CE-9MQ"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="D1V-aL-Nw7" firstAttribute="top" secondItem="gus-hQ-gky" secondAttribute="top" id="DnR-pV-w9O"/>
+                            <constraint firstItem="D1V-aL-Nw7" firstAttribute="leading" secondItem="gus-hQ-gky" secondAttribute="leading" id="KQ9-22-8YL"/>
+                            <constraint firstAttribute="trailing" secondItem="D1V-aL-Nw7" secondAttribute="trailing" id="kYl-MX-0gR"/>
+                            <constraint firstItem="yP8-oE-Uxr" firstAttribute="top" secondItem="D1V-aL-Nw7" secondAttribute="bottom" id="mDD-9A-L9M"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="currentCollectionView" destination="D1V-aL-Nw7" id="wWo-wj-w6f"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kgT-eJ-UNP" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="127"/>
+        </scene>
+    </scenes>
+</document>

@@ -24,6 +24,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().titleTextAttributes = NSDictionary(object: UIColor.whiteColor(), forKey: NSForegroundColorAttributeName) as [NSObject : AnyObject]
         
         UINavigationBar.appearance().translucent = false
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor(),
+            NSFontAttributeName: UIFont.mySystemFontOfSize(18)]
         UINavigationBar.appearance().setTitleVerticalPositionAdjustment(-1, forBarMetrics: .Default)
 
         UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: true)

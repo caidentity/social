@@ -14,6 +14,7 @@ class NibTableViewCell: UITableViewCell
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var bodyTextView: UITextView!
+    @IBOutlet weak var postActions: UIButton!
     
     @IBOutlet weak var headerHeightConstraint: NSLayoutConstraint!
         
@@ -26,9 +27,14 @@ class NibTableViewCell: UITableViewCell
     }
     func appearence() {
         // Title
-        titleLabel.textColor = UIColor.TWGray6()
+        titleLabel.textColor = UIColor.TWGray7()
+        titleLabel.font = UIFont.mysemiboldSystemFontOfSize(16)
         dateLabel.textColor = UIColor.TWGray4()
+        dateLabel.font = UIFont.mySystemFontOfSize(14)
+
+        //Body
         bodyTextView.textColor = UIColor.TWGray7()
+        bodyTextView.font = UIFont.mySystemFontOfSize(15)
         
         //userAvatar
         self.userAvatar.layer.cornerRadius = 4.0

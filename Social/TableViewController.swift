@@ -34,6 +34,8 @@ class TableViewController: UITableViewController
         
         tableView.registerNib(UINib(nibName: "NibTableViewCell", bundle: NSBundle.mainBundle()), forCellReuseIdentifier: kCellIdentifier)
         
+        self.tableView.contentInset = UIEdgeInsets(top: 10, left: tableView.contentInset.bottom,
+            bottom: 15, right: tableView.contentInset.right)
         
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 200.0

@@ -7,8 +7,8 @@
         <!--Master View Controller-->
         <scene sceneID="T9b-ZY-dN9">
             <objects>
-                <tabBarController storyboardIdentifier="MasterViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="XhP-ny-Gkb" customClass="MasterViewController" customModule="News_Feed_Test" customModuleProvider="target" sceneMemberID="viewController">
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                <tabBarController storyboardIdentifier="MasterViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="XhP-ny-Gkb" customClass="MasterViewController" customModule="Social" customModuleProvider="target" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="JOW-E0-XNE">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

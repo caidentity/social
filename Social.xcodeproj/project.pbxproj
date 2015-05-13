@@ -7,8 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		446691921B01889C00C2DC15 /* SettingsInputVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446691911B01889C00C2DC15 /* SettingsInputVC.swift */; };
+		446691961B019B9D00C2DC15 /* SettingsTableLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446691951B019B9D00C2DC15 /* SettingsTableLayout.swift */; };
+		446691AB1B01A77D00C2DC15 /* proxima_nova_black_it.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4466919D1B01A57800C2DC15 /* proxima_nova_black_it.ttf */; };
+		446691AC1B01A77D00C2DC15 /* proxima_nova_black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4466919E1B01A57800C2DC15 /* proxima_nova_black.ttf */; };
+		446691AD1B01A77D00C2DC15 /* proxima_nova_bold_it.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4466919F1B01A57800C2DC15 /* proxima_nova_bold_it.ttf */; };
+		446691AE1B01A77D00C2DC15 /* proxima_nova_bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 446691A01B01A57800C2DC15 /* proxima_nova_bold.ttf */; };
+		446691AF1B01A77D00C2DC15 /* proxima_nova_light_it.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 446691A11B01A57800C2DC15 /* proxima_nova_light_it.ttf */; };
+		446691B01B01A77D00C2DC15 /* proxima_nova_light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 446691A21B01A57800C2DC15 /* proxima_nova_light.ttf */; };
+		446691B11B01A77D00C2DC15 /* proxima_nova_reg_it.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 446691A31B01A57800C2DC15 /* proxima_nova_reg_it.ttf */; };
+		446691B21B01A77D00C2DC15 /* proxima_nova_reg.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 446691A41B01A57800C2DC15 /* proxima_nova_reg.ttf */; };
+		446691B31B01A77D00C2DC15 /* proxima_nova_sbold_it.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 446691A51B01A57800C2DC15 /* proxima_nova_sbold_it.ttf */; };
+		446691B41B01A77D00C2DC15 /* proxima_nova_sbold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 446691A61B01A57800C2DC15 /* proxima_nova_sbold.ttf */; };
+		446691B51B01A77D00C2DC15 /* proxima_nova_thin_it.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 446691A71B01A57800C2DC15 /* proxima_nova_thin_it.ttf */; };
+		446691B61B01A77D00C2DC15 /* proxima_nova_thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 446691A81B01A57800C2DC15 /* proxima_nova_thin.ttf */; };
+		446691B71B01A77D00C2DC15 /* proxima_nova_xbold_it.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 446691A91B01A57800C2DC15 /* proxima_nova_xbold_it.ttf */; };
+		446691B81B01A77D00C2DC15 /* proxima_nova_xbold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 446691AA1B01A57800C2DC15 /* proxima_nova_xbold.ttf */; };
 		446D9BEB1AFFBFD9005E291C /* SocialTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447818A41AFFBDDE00CF0DF1 /* SocialTests.swift */; };
-		447818A21AFFBCE300CF0DF1 /* Base.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 447818A11AFFBCE300CF0DF1 /* Base.lproj */; };
 		447818A71AFFBDED00CF0DF1 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 447818A61AFFBDED00CF0DF1 /* Info.plist */; };
 		4485AF7D1AFFBC5B005CCF3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4485AF6D1AFFBC5B005CCF3D /* AppDelegate.swift */; };
 		4485AF7F1AFFBC5B005CCF3D /* FeedDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4485AF6F1AFFBC5B005CCF3D /* FeedDetailCell.swift */; };
@@ -18,15 +33,26 @@
 		4485AF831AFFBC5B005CCF3D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4485AF731AFFBC5B005CCF3D /* Images.xcassets */; };
 		4485AF841AFFBC5B005CCF3D /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4485AF741AFFBC5B005CCF3D /* Info.plist */; };
 		4485AF851AFFBC5B005CCF3D /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4485AF751AFFBC5B005CCF3D /* MasterViewController.swift */; };
-		4485AF861AFFBC5B005CCF3D /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4485AF761AFFBC5B005CCF3D /* Model.swift */; };
 		4485AF871AFFBC5B005CCF3D /* NibTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4485AF771AFFBC5B005CCF3D /* NibTableViewCell.swift */; };
 		4485AF881AFFBC5B005CCF3D /* NibTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4485AF781AFFBC5B005CCF3D /* NibTableViewCell.xib */; };
 		4485AF891AFFBC5B005CCF3D /* TableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4485AF791AFFBC5B005CCF3D /* TableViewController.storyboard */; };
 		4485AF8A1AFFBC5B005CCF3D /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4485AF7A1AFFBC5B005CCF3D /* TableViewController.swift */; };
 		4485AF8B1AFFBC5B005CCF3D /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4485AF7B1AFFBC5B005CCF3D /* UIColorExtension.swift */; };
 		4485AF8C1AFFBC5B005CCF3D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4485AF7C1AFFBC5B005CCF3D /* ViewController.swift */; };
+		44CA4ED51B02A0FE002C426C /* CollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44CA4ED41B02A0FE002C426C /* CollectionHeaderView.xib */; };
+		44CA4ED71B02A12A002C426C /* ProfileHeaderLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CA4ED61B02A12A002C426C /* ProfileHeaderLayout.swift */; };
+		44D29B7A1B02A732007B2BB7 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D29B791B02A732007B2BB7 /* ProfileVC.swift */; };
+		44D29B7C1B02A78B007B2BB7 /* ProfileVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44D29B7B1B02A78B007B2BB7 /* ProfileVC.storyboard */; };
 		44FE93461AFFC3D2008CA73E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44FE93441AFFC3D2008CA73E /* LaunchScreen.xib */; };
 		44FE93471AFFC3D2008CA73E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44FE93451AFFC3D2008CA73E /* Main.storyboard */; };
+		44FE93491AFFD466008CA73E /* Model.swift in Resources */ = {isa = PBXBuildFile; fileRef = 49E1BCA71AE69CCA00FD0AB6 /* Model.swift */; };
+		44FE934A1AFFD477008CA73E /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E1BCA71AE69CCA00FD0AB6 /* Model.swift */; };
+		44FE934E1AFFD4DE008CA73E /* UIFontExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FE934D1AFFD4DE008CA73E /* UIFontExtensions.swift */; };
+		44FE93571B001865008CA73E /* SettingsTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FE93521B001865008CA73E /* SettingsTableCell.swift */; };
+		44FE93581B001865008CA73E /* SettingsStickyHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FE93531B001865008CA73E /* SettingsStickyHeader.swift */; };
+		44FE93591B001865008CA73E /* SettingsStickyHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44FE93541B001865008CA73E /* SettingsStickyHeader.xib */; };
+		44FE935A1B001865008CA73E /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FE93551B001865008CA73E /* SettingsVC.swift */; };
+		44FE935B1B001865008CA73E /* SettingsVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44FE93561B001865008CA73E /* SettingsVC.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +66,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		447818A11AFFBCE300CF0DF1 /* Base.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Base.lproj; path = Social/Base.lproj; sourceTree = SOURCE_ROOT; };
+		446691911B01889C00C2DC15 /* SettingsInputVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsInputVC.swift; sourceTree = "<group>"; };
+		446691951B019B9D00C2DC15 /* SettingsTableLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableLayout.swift; sourceTree = "<group>"; };
+		4466919D1B01A57800C2DC15 /* proxima_nova_black_it.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = proxima_nova_black_it.ttf; path = Fonts/proxima_nova_black_it.ttf; sourceTree = "<group>"; };
+		4466919E1B01A57800C2DC15 /* proxima_nova_black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = proxima_nova_black.ttf; path = Fonts/proxima_nova_black.ttf; sourceTree = "<group>"; };
+		4466919F1B01A57800C2DC15 /* proxima_nova_bold_it.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = proxima_nova_bold_it.ttf; path = Fonts/proxima_nova_bold_it.ttf; sourceTree = "<group>"; };
+		446691A01B01A57800C2DC15 /* proxima_nova_bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = proxima_nova_bold.ttf; path = Fonts/proxima_nova_bold.ttf; sourceTree = "<group>"; };
+		446691A11B01A57800C2DC15 /* proxima_nova_light_it.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = proxima_nova_light_it.ttf; path = Fonts/proxima_nova_light_it.ttf; sourceTree = "<group>"; };
+		446691A21B01A57800C2DC15 /* proxima_nova_light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = proxima_nova_light.ttf; path = Fonts/proxima_nova_light.ttf; sourceTree = "<group>"; };
+		446691A31B01A57800C2DC15 /* proxima_nova_reg_it.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = proxima_nova_reg_it.ttf; path = Fonts/proxima_nova_reg_it.ttf; sourceTree = "<group>"; };
+		446691A41B01A57800C2DC15 /* proxima_nova_reg.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = proxima_nova_reg.ttf; path = Fonts/proxima_nova_reg.ttf; sourceTree = "<group>"; };
+		446691A51B01A57800C2DC15 /* proxima_nova_sbold_it.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = proxima_nova_sbold_it.ttf; path = Fonts/proxima_nova_sbold_it.ttf; sourceTree = "<group>"; };
+		446691A61B01A57800C2DC15 /* proxima_nova_sbold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = proxima_nova_sbold.ttf; path = Fonts/proxima_nova_sbold.ttf; sourceTree = "<group>"; };
+		446691A71B01A57800C2DC15 /* proxima_nova_thin_it.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = proxima_nova_thin_it.ttf; path = Fonts/proxima_nova_thin_it.ttf; sourceTree = "<group>"; };
+		446691A81B01A57800C2DC15 /* proxima_nova_thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = proxima_nova_thin.ttf; path = Fonts/proxima_nova_thin.ttf; sourceTree = "<group>"; };
+		446691A91B01A57800C2DC15 /* proxima_nova_xbold_it.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = proxima_nova_xbold_it.ttf; path = Fonts/proxima_nova_xbold_it.ttf; sourceTree = "<group>"; };
+		446691AA1B01A57800C2DC15 /* proxima_nova_xbold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = proxima_nova_xbold.ttf; path = Fonts/proxima_nova_xbold.ttf; sourceTree = "<group>"; };
 		447818A41AFFBDDE00CF0DF1 /* SocialTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SocialTests.swift; path = SocialTests/SocialTests.swift; sourceTree = SOURCE_ROOT; };
 		447818A61AFFBDED00CF0DF1 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = SocialTests/Info.plist; sourceTree = SOURCE_ROOT; };
 		4485AF6D1AFFBC5B005CCF3D /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Social/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
@@ -51,15 +92,24 @@
 		4485AF731AFFBC5B005CCF3D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Social/Images.xcassets; sourceTree = SOURCE_ROOT; };
 		4485AF741AFFBC5B005CCF3D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Social/Info.plist; sourceTree = SOURCE_ROOT; };
 		4485AF751AFFBC5B005CCF3D /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MasterViewController.swift; path = Social/MasterViewController.swift; sourceTree = SOURCE_ROOT; };
-		4485AF761AFFBC5B005CCF3D /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Model.swift; path = Social/Model.swift; sourceTree = SOURCE_ROOT; };
 		4485AF771AFFBC5B005CCF3D /* NibTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NibTableViewCell.swift; path = Social/NibTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		4485AF781AFFBC5B005CCF3D /* NibTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NibTableViewCell.xib; path = Social/NibTableViewCell.xib; sourceTree = SOURCE_ROOT; };
 		4485AF791AFFBC5B005CCF3D /* TableViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = TableViewController.storyboard; path = Social/TableViewController.storyboard; sourceTree = SOURCE_ROOT; };
 		4485AF7A1AFFBC5B005CCF3D /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableViewController.swift; path = Social/TableViewController.swift; sourceTree = SOURCE_ROOT; };
 		4485AF7B1AFFBC5B005CCF3D /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIColorExtension.swift; path = Social/UIColorExtension.swift; sourceTree = SOURCE_ROOT; };
 		4485AF7C1AFFBC5B005CCF3D /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = Social/ViewController.swift; sourceTree = SOURCE_ROOT; };
+		44CA4ED41B02A0FE002C426C /* CollectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionHeaderView.xib; sourceTree = "<group>"; };
+		44CA4ED61B02A12A002C426C /* ProfileHeaderLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileHeaderLayout.swift; sourceTree = "<group>"; };
+		44D29B791B02A732007B2BB7 /* ProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		44D29B7B1B02A78B007B2BB7 /* ProfileVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProfileVC.storyboard; sourceTree = "<group>"; };
 		44FE93441AFFC3D2008CA73E /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		44FE93451AFFC3D2008CA73E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		44FE934D1AFFD4DE008CA73E /* UIFontExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIFontExtensions.swift; sourceTree = "<group>"; };
+		44FE93521B001865008CA73E /* SettingsTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableCell.swift; sourceTree = "<group>"; };
+		44FE93531B001865008CA73E /* SettingsStickyHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsStickyHeader.swift; sourceTree = "<group>"; };
+		44FE93541B001865008CA73E /* SettingsStickyHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsStickyHeader.xib; sourceTree = "<group>"; };
+		44FE93551B001865008CA73E /* SettingsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		44FE93561B001865008CA73E /* SettingsVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SettingsVC.storyboard; sourceTree = "<group>"; };
 		49E1BC821AE6993600FD0AB6 /* Social.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Social.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49E1BC971AE6993600FD0AB6 /* SocialTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SocialTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		49E1BCA71AE69CCA00FD0AB6 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
@@ -83,6 +133,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		446691971B019BC500C2DC15 /* Table */ = {
+			isa = PBXGroup;
+			children = (
+				44FE93521B001865008CA73E /* SettingsTableCell.swift */,
+				44FE93531B001865008CA73E /* SettingsStickyHeader.swift */,
+				44FE93541B001865008CA73E /* SettingsStickyHeader.xib */,
+				446691951B019B9D00C2DC15 /* SettingsTableLayout.swift */,
+			);
+			name = Table;
+			sourceTree = "<group>";
+		};
+		4466919C1B01A53200C2DC15 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				4466919D1B01A57800C2DC15 /* proxima_nova_black_it.ttf */,
+				4466919E1B01A57800C2DC15 /* proxima_nova_black.ttf */,
+				4466919F1B01A57800C2DC15 /* proxima_nova_bold_it.ttf */,
+				446691A01B01A57800C2DC15 /* proxima_nova_bold.ttf */,
+				446691A11B01A57800C2DC15 /* proxima_nova_light_it.ttf */,
+				446691A21B01A57800C2DC15 /* proxima_nova_light.ttf */,
+				446691A31B01A57800C2DC15 /* proxima_nova_reg_it.ttf */,
+				446691A41B01A57800C2DC15 /* proxima_nova_reg.ttf */,
+				446691A51B01A57800C2DC15 /* proxima_nova_sbold_it.ttf */,
+				446691A61B01A57800C2DC15 /* proxima_nova_sbold.ttf */,
+				446691A71B01A57800C2DC15 /* proxima_nova_thin_it.ttf */,
+				446691A81B01A57800C2DC15 /* proxima_nova_thin.ttf */,
+				446691A91B01A57800C2DC15 /* proxima_nova_xbold_it.ttf */,
+				446691AA1B01A57800C2DC15 /* proxima_nova_xbold.ttf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
 		447818A31AFFBCF300CF0DF1 /* Feed */ = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +185,37 @@
 				4485AF721AFFBC5B005CCF3D /* FeedDetailVC.swift */,
 			);
 			name = FeedDetail;
+			sourceTree = "<group>";
+		};
+		44D29B781B02A70E007B2BB7 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				44CA4ED41B02A0FE002C426C /* CollectionHeaderView.xib */,
+				44D29B791B02A732007B2BB7 /* ProfileVC.swift */,
+				44D29B7B1B02A78B007B2BB7 /* ProfileVC.storyboard */,
+				44CA4ED61B02A12A002C426C /* ProfileHeaderLayout.swift */,
+			);
+			name = Profile;
+			sourceTree = "<group>";
+		};
+		44FE934F1AFFD5A1008CA73E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4485AF7B1AFFBC5B005CCF3D /* UIColorExtension.swift */,
+				44FE934D1AFFD4DE008CA73E /* UIFontExtensions.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		44FE93511B00173C008CA73E /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				446691911B01889C00C2DC15 /* SettingsInputVC.swift */,
+				446691971B019BC500C2DC15 /* Table */,
+				44FE93551B001865008CA73E /* SettingsVC.swift */,
+				44FE93561B001865008CA73E /* SettingsVC.storyboard */,
+			);
+			name = Settings;
 			sourceTree = "<group>";
 		};
 		49E1BC791AE6993600FD0AB6 = {
@@ -131,13 +244,14 @@
 				4485AF751AFFBC5B005CCF3D /* MasterViewController.swift */,
 				44FE93441AFFC3D2008CA73E /* LaunchScreen.xib */,
 				44FE93451AFFC3D2008CA73E /* Main.storyboard */,
-				447818A11AFFBCE300CF0DF1 /* Base.lproj */,
 				4485AF731AFFBC5B005CCF3D /* Images.xcassets */,
-				4485AF8D1AFFBC69005CCF3D /* FeedDetail */,
 				447818A31AFFBCF300CF0DF1 /* Feed */,
-				4485AF7B1AFFBC5B005CCF3D /* UIColorExtension.swift */,
-				4485AF761AFFBC5B005CCF3D /* Model.swift */,
+				4485AF8D1AFFBC69005CCF3D /* FeedDetail */,
+				44D29B781B02A70E007B2BB7 /* Profile */,
+				44FE93511B00173C008CA73E /* Settings */,
+				44FE934F1AFFD5A1008CA73E /* Extensions */,
 				49E1BCB01AE69CDC00FD0AB6 /* Common */,
+				4466919C1B01A53200C2DC15 /* Fonts */,
 				49E1BC851AE6993600FD0AB6 /* Supporting Files */,
 			);
 			path = Social;
@@ -256,13 +370,31 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				446691AB1B01A77D00C2DC15 /* proxima_nova_black_it.ttf in Resources */,
+				44D29B7C1B02A78B007B2BB7 /* ProfileVC.storyboard in Resources */,
+				446691AC1B01A77D00C2DC15 /* proxima_nova_black.ttf in Resources */,
+				446691AD1B01A77D00C2DC15 /* proxima_nova_bold_it.ttf in Resources */,
+				446691AE1B01A77D00C2DC15 /* proxima_nova_bold.ttf in Resources */,
+				446691AF1B01A77D00C2DC15 /* proxima_nova_light_it.ttf in Resources */,
+				446691B01B01A77D00C2DC15 /* proxima_nova_light.ttf in Resources */,
+				446691B11B01A77D00C2DC15 /* proxima_nova_reg_it.ttf in Resources */,
+				446691B21B01A77D00C2DC15 /* proxima_nova_reg.ttf in Resources */,
+				446691B31B01A77D00C2DC15 /* proxima_nova_sbold_it.ttf in Resources */,
+				446691B41B01A77D00C2DC15 /* proxima_nova_sbold.ttf in Resources */,
+				446691B51B01A77D00C2DC15 /* proxima_nova_thin_it.ttf in Resources */,
+				446691B61B01A77D00C2DC15 /* proxima_nova_thin.ttf in Resources */,
+				446691B71B01A77D00C2DC15 /* proxima_nova_xbold_it.ttf in Resources */,
+				446691B81B01A77D00C2DC15 /* proxima_nova_xbold.ttf in Resources */,
+				44FE93491AFFD466008CA73E /* Model.swift in Resources */,
 				447818A71AFFBDED00CF0DF1 /* Info.plist in Resources */,
 				44FE93471AFFC3D2008CA73E /* Main.storyboard in Resources */,
+				44FE935B1B001865008CA73E /* SettingsVC.storyboard in Resources */,
+				44FE93591B001865008CA73E /* SettingsStickyHeader.xib in Resources */,
 				4485AF811AFFBC5B005CCF3D /* FeedDetailVC.storyboard in Resources */,
-				447818A21AFFBCE300CF0DF1 /* Base.lproj in Resources */,
 				4485AF881AFFBC5B005CCF3D /* NibTableViewCell.xib in Resources */,
 				4485AF831AFFBC5B005CCF3D /* Images.xcassets in Resources */,
 				4485AF891AFFBC5B005CCF3D /* TableViewController.storyboard in Resources */,
+				44CA4ED51B02A0FE002C426C /* CollectionHeaderView.xib in Resources */,
 				4485AF801AFFBC5B005CCF3D /* FeedDetailCell.xib in Resources */,
 				44FE93461AFFC3D2008CA73E /* LaunchScreen.xib in Resources */,
 				4485AF841AFFBC5B005CCF3D /* Info.plist in Resources */,
@@ -283,15 +415,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44FE934A1AFFD477008CA73E /* Model.swift in Sources */,
+				446691961B019B9D00C2DC15 /* SettingsTableLayout.swift in Sources */,
 				4485AF8C1AFFBC5B005CCF3D /* ViewController.swift in Sources */,
+				44FE934E1AFFD4DE008CA73E /* UIFontExtensions.swift in Sources */,
+				44FE93581B001865008CA73E /* SettingsStickyHeader.swift in Sources */,
+				44FE935A1B001865008CA73E /* SettingsVC.swift in Sources */,
 				4485AF851AFFBC5B005CCF3D /* MasterViewController.swift in Sources */,
+				44FE93571B001865008CA73E /* SettingsTableCell.swift in Sources */,
 				4485AF7F1AFFBC5B005CCF3D /* FeedDetailCell.swift in Sources */,
 				4485AF821AFFBC5B005CCF3D /* FeedDetailVC.swift in Sources */,
+				446691921B01889C00C2DC15 /* SettingsInputVC.swift in Sources */,
 				4485AF8A1AFFBC5B005CCF3D /* TableViewController.swift in Sources */,
 				4485AF8B1AFFBC5B005CCF3D /* UIColorExtension.swift in Sources */,
+				44D29B7A1B02A732007B2BB7 /* ProfileVC.swift in Sources */,
+				44CA4ED71B02A12A002C426C /* ProfileHeaderLayout.swift in Sources */,
 				4485AF871AFFBC5B005CCF3D /* NibTableViewCell.swift in Sources */,
 				4485AF7D1AFFBC5B005CCF3D /* AppDelegate.swift in Sources */,
-				4485AF861AFFBC5B005CCF3D /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

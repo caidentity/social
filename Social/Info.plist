@@ -47,5 +47,22 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>proxima_nova_black_it.ttf</string>
+		<string>proxima_nova_black.ttf</string>
+		<string>proxima_nova_bold_it.ttf</string>
+		<string>proxima_nova_bold.ttf</string>
+		<string>proxima_nova_light_it.ttf</string>
+		<string>proxima_nova_light.ttf</string>
+		<string>proxima_nova_reg_it.ttf</string>
+		<string>proxima_nova_reg.ttf</string>
+		<string>proxima_nova_sbold_it.ttf</string>
+		<string>proxima_nova_sbold.ttf</string>
+		<string>proxima_nova_thin_it.ttf</string>
+		<string>proxima_nova_thin.ttf</string>
+		<string>proxima_nova_xbold_it.ttf</string>
+		<string>proxima_nova_xbold.ttf</string>
+	</array>
 </dict>
 </plist>
