@@ -6,6 +6,7 @@
 //  Copyright (c) 2015 Craig Aucutt. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
 class SettingsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
@@ -73,6 +74,7 @@ class SettingsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDa
         return CGSizeMake(collectionView.frame.size.width, CGFloat(SettingsStickyHeaderHeight))
     }
 
+    //TODO: Finish getting this implimented
     // Direct to Dummy Settings Input VC
     func goToSettingsInputVC()
     {

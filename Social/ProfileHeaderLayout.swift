@@ -17,7 +17,7 @@ import UIKit
 }
 
 
-class ProgileHeaderLayout: UICollectionViewFlowLayout {
+class ProfileHeaderLayout: UICollectionViewFlowLayout {
     
     
     internal var layoutDelegate:ProfileHeaderLayoutDelegate?;

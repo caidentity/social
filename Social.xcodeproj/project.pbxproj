@@ -43,6 +43,9 @@
 		44CA4ED71B02A12A002C426C /* ProfileHeaderLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CA4ED61B02A12A002C426C /* ProfileHeaderLayout.swift */; };
 		44D29B7A1B02A732007B2BB7 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D29B791B02A732007B2BB7 /* ProfileVC.swift */; };
 		44D29B7C1B02A78B007B2BB7 /* ProfileVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44D29B7B1B02A78B007B2BB7 /* ProfileVC.storyboard */; };
+		44E252C41B02F9E100AA6A88 /* ProfileStickyHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E252C11B02F9E100AA6A88 /* ProfileStickyHeader.swift */; };
+		44E252C51B02F9E100AA6A88 /* ProfileStickyHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44E252C21B02F9E100AA6A88 /* ProfileStickyHeader.xib */; };
+		44E252C61B02F9E100AA6A88 /* ProfileTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E252C31B02F9E100AA6A88 /* ProfileTableCell.swift */; };
 		44FE93461AFFC3D2008CA73E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44FE93441AFFC3D2008CA73E /* LaunchScreen.xib */; };
 		44FE93471AFFC3D2008CA73E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44FE93451AFFC3D2008CA73E /* Main.storyboard */; };
 		44FE93491AFFD466008CA73E /* Model.swift in Resources */ = {isa = PBXBuildFile; fileRef = 49E1BCA71AE69CCA00FD0AB6 /* Model.swift */; };
@@ -102,6 +105,9 @@
 		44CA4ED61B02A12A002C426C /* ProfileHeaderLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileHeaderLayout.swift; sourceTree = "<group>"; };
 		44D29B791B02A732007B2BB7 /* ProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		44D29B7B1B02A78B007B2BB7 /* ProfileVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProfileVC.storyboard; sourceTree = "<group>"; };
+		44E252C11B02F9E100AA6A88 /* ProfileStickyHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileStickyHeader.swift; sourceTree = "<group>"; };
+		44E252C21B02F9E100AA6A88 /* ProfileStickyHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileStickyHeader.xib; sourceTree = "<group>"; };
+		44E252C31B02F9E100AA6A88 /* ProfileTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableCell.swift; sourceTree = "<group>"; };
 		44FE93441AFFC3D2008CA73E /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		44FE93451AFFC3D2008CA73E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		44FE934D1AFFD4DE008CA73E /* UIFontExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIFontExtensions.swift; sourceTree = "<group>"; };
@@ -191,11 +197,22 @@
 			isa = PBXGroup;
 			children = (
 				44CA4ED41B02A0FE002C426C /* CollectionHeaderView.xib */,
+				44CA4ED61B02A12A002C426C /* ProfileHeaderLayout.swift */,
+				44E252C01B02F96700AA6A88 /* Table */,
 				44D29B791B02A732007B2BB7 /* ProfileVC.swift */,
 				44D29B7B1B02A78B007B2BB7 /* ProfileVC.storyboard */,
-				44CA4ED61B02A12A002C426C /* ProfileHeaderLayout.swift */,
 			);
 			name = Profile;
+			sourceTree = "<group>";
+		};
+		44E252C01B02F96700AA6A88 /* Table */ = {
+			isa = PBXGroup;
+			children = (
+				44E252C11B02F9E100AA6A88 /* ProfileStickyHeader.swift */,
+				44E252C21B02F9E100AA6A88 /* ProfileStickyHeader.xib */,
+				44E252C31B02F9E100AA6A88 /* ProfileTableCell.swift */,
+			);
+			name = Table;
 			sourceTree = "<group>";
 		};
 		44FE934F1AFFD5A1008CA73E /* Extensions */ = {
@@ -387,6 +404,7 @@
 				446691B81B01A77D00C2DC15 /* proxima_nova_xbold.ttf in Resources */,
 				44FE93491AFFD466008CA73E /* Model.swift in Resources */,
 				447818A71AFFBDED00CF0DF1 /* Info.plist in Resources */,
+				44E252C51B02F9E100AA6A88 /* ProfileStickyHeader.xib in Resources */,
 				44FE93471AFFC3D2008CA73E /* Main.storyboard in Resources */,
 				44FE935B1B001865008CA73E /* SettingsVC.storyboard in Resources */,
 				44FE93591B001865008CA73E /* SettingsStickyHeader.xib in Resources */,
@@ -416,6 +434,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				44FE934A1AFFD477008CA73E /* Model.swift in Sources */,
+				44E252C61B02F9E100AA6A88 /* ProfileTableCell.swift in Sources */,
+				44E252C41B02F9E100AA6A88 /* ProfileStickyHeader.swift in Sources */,
 				446691961B019B9D00C2DC15 /* SettingsTableLayout.swift in Sources */,
 				4485AF8C1AFFBC5B005CCF3D /* ViewController.swift in Sources */,
 				44FE934E1AFFD4DE008CA73E /* UIFontExtensions.swift in Sources */,

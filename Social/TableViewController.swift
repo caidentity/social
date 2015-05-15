@@ -42,8 +42,78 @@ class TableViewController: UITableViewController
         
         model.appendData(20)
         tableView.reloadData()
+        
+        // Add RightNavbar Button.
+        self.addRightNavItem()
+
+        // Add RightNavbar Button.
+        self.addLeftNavItem()
+
     }
-    
+    // Add Barbutton
+    func addRightNavItem()
+    {
+        
+        // hide default navigation bar button item
+        self.navigationItem.rightBarButtonItem = nil;
+        self.navigationItem.hidesBackButton = true;
+        
+        let buttonBack: UIButton = UIButton.buttonWithType(UIButtonType.Custom) as! UIButton
+        buttonBack.frame = CGRectMake(0, 0, 40, 40)
+        buttonBack.setImage(UIImage(named:"navbar-post"), forState: UIControlState.Normal)
+        buttonBack.addTarget(self, action: "rightNavButtonClick:", forControlEvents: UIControlEvents.TouchUpInside)
+        
+        var leftBarButtonItem: UIBarButtonItem = UIBarButtonItem(customView: buttonBack)
+        
+        self.navigationItem.setRightBarButtonItem(leftBarButtonItem, animated: false)
+        
+    }
+    // Right Barbutton Pressed
+    func rightNavButtonClick(sender:UIButton!)
+    {
+        
+        let storyboard = UIStoryboard(name: "SettingsVC", bundle: nil)
+        let vc = storyboard.instantiateViewControllerWithIdentifier("SettingsVC") as! UIViewController
+        self.presentViewController(vc, animated: true, completion: nil)
+        
+        let navController                           = UINavigationController(rootViewController: vc)
+        navController.navigationBar.translucent     = false
+        
+        self.navigationController?.popViewControllerAnimated(true)
+        
+    }
+    // Add Barbutton
+    func addLeftNavItem()
+    {
+        
+        // hide default navigation bar button item
+        self.navigationItem.leftBarButtonItem = nil;
+        self.navigationItem.hidesBackButton = true;
+        
+        let buttonBack: UIButton = UIButton.buttonWithType(UIButtonType.Custom) as! UIButton
+        buttonBack.frame = CGRectMake(0, 0, 40, 40)
+        buttonBack.setImage(UIImage(named:"navbar-settings"), forState: UIControlState.Normal)
+        buttonBack.addTarget(self, action: "leftNavButtonClick:", forControlEvents: UIControlEvents.TouchUpInside)
+        
+        var leftBarButtonItem: UIBarButtonItem = UIBarButtonItem(customView: buttonBack)
+        
+        self.navigationItem.setLeftBarButtonItem(leftBarButtonItem, animated: false)
+        
+    }
+    // Left Barbutton Pressed
+    func leftNavButtonClick(sender:UIButton!)
+    {
+        
+        let storyboard = UIStoryboard(name: "SettingsVC", bundle: nil)
+        let vc = storyboard.instantiateViewControllerWithIdentifier("SettingsVC") as! UIViewController
+        self.presentViewController(vc, animated: true, completion: nil)
+        
+        let navController                           = UINavigationController(rootViewController: vc)
+        navController.navigationBar.translucent     = false
+        
+        self.navigationController?.popViewControllerAnimated(true)
+        
+    }
     override func viewDidAppear(animated: Bool)
     {
         super.viewDidAppear(animated)

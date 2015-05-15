@@ -10,6 +10,9 @@ import Foundation
 import UIKit
 
 class ProfileVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UIScrollViewDelegate, ProfileHeaderLayoutDelegate {
+ 
+    var settingsSections = [String : [String]]()
+    let ProfileCellReuseIdentifier = "ProfileTableCell"
     
     let iPhone4SeriesHeight:CGFloat = 480
     let iPhone5SeriesHeight:CGFloat = 568
@@ -33,14 +36,15 @@ class ProfileVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
         currentCollectionView.registerNib (UINib(nibName: "CollectionHeaderView", bundle: NSBundle.mainBundle()), forSupplementaryViewOfKind:UICollectionElementKindSectionHeader,
             withReuseIdentifier:"kReusableCollectionHeaderView");
         
-        // Do any additional setup after loading the view, typically from a nib.
-        self.addRighNavItem()
+        // Populate Data here
+        populateDataSource()
         
+        // Add RightNavbar Button.
+        self.addRighNavItem()        
     }
 
     // Add Barbutton
-    func addRighNavItem()
-    {
+    func addRighNavItem() {
         
         // hide default navigation bar button item
         self.navigationItem.leftBarButtonItem = nil;
@@ -56,9 +60,9 @@ class ProfileVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
         self.navigationItem.setLeftBarButtonItem(leftBarButtonItem, animated: false)
         
     }
+    
     // Barbutton Pressed
-    func leftNavButtonClick(sender:UIButton!)
-    {
+    func leftNavButtonClick(sender:UIButton!) {
  
         let storyboard = UIStoryboard(name: "SettingsVC", bundle: nil)
         let vc = storyboard.instantiateViewControllerWithIdentifier("SettingsVC") as! UIViewController
@@ -76,33 +80,51 @@ class ProfileVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
         // Dispose of any resources that can be recreated.
     }
     
-    
+    // MARK: UICollectionViewDataSource methods
+    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+        return settingsSections.count;
+    }
+   
+    // Making Call here to fetch number of items in profile strings below
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1;
+        let SettingsItemKeys = Array(settingsSections.keys)
+        let sectionKeyAtSection = SettingsItemKeys[section]
+        let SettingsItemArray = settingsSections[sectionKeyAtSection]
+        return SettingsItemArray?.count ?? 0;
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+            var cell = collectionView.dequeueReusableCellWithReuseIdentifier(ProfileCellReuseIdentifier, forIndexPath: indexPath) as! ProfileTableCell
+            let SettingsItemKeys = Array(settingsSections.keys)
+            let sectionKeyAtSection = SettingsItemKeys[indexPath.section]
+            let SettingsItemArray = settingsSections[sectionKeyAtSection]
+            if let SettingsRowName = SettingsItemArray?[indexPath.row] {
+                cell.setUpCellWithSettingsRowName(SettingsRowName)
+            }
+            // TODO: Finish seting up sublabel string
+//            if let SettingsBodyName = SettingsItemArray?[indexPath.row] {
+//                cell.setUpCellWithSettingsBodyName(SettingsBodyName)
+//            }
         
-        var collectionViewCell:UICollectionViewCell?;
-        
-        if indexPath.row == 0 {
-            collectionViewCell = currentCollectionView.dequeueReusableCellWithReuseIdentifier("kReusableCollectionViewCell1", forIndexPath: indexPath) as? UICollectionViewCell;
-        }
-        else if (indexPath.row == 1){
-            collectionViewCell = currentCollectionView.dequeueReusableCellWithReuseIdentifier("kReusableMapCollectionViewCell", forIndexPath: indexPath) as? UICollectionViewCell;
-        }
-        
-        return collectionViewCell!;
+        return cell
     }
     
+    // This sets the header to only be called for first cell in collection
     func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView {
         
         var reusableView:UICollectionReusableView?;
-        
+
         reusableView = currentCollectionView.dequeueReusableSupplementaryViewOfKind(kind, withReuseIdentifier: "kReusableCollectionHeaderView", forIndexPath: indexPath) as? UICollectionReusableView;
         
+        if (settingsSections.count == 2) {
+            reusableView!.hidden = true;
+        }
+        else {
+        }
+
         return reusableView!;
     }
+    
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
         
@@ -111,45 +133,26 @@ class ProfileVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
         var flowLayout:UICollectionViewFlowLayout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout;
         var sectionInset = flowLayout.sectionInset;
         
-        if indexPath.item == 0{
-            size = CGSizeMake(currentCollectionView.frame.size.width-(sectionInset.left+sectionInset.right), 40);
-        }
-        else if (indexPath.item == 1) {
-            
-            var deviceHeight:CGFloat = UIScreen.mainScreen().bounds.size.height;
-            var cellHeight:CGFloat = 320;
-            
-            switch (deviceHeight) {
-            case iPhone4SeriesHeight:
-                cellHeight = 320;
-                break;
-                
-            case iPhone5SeriesHeight:
-                cellHeight = 410;
-                break;
-                
-            case iPhone6Height:
-                cellHeight = 560;
-                break;
-                
-            case iPhone6PlusHeight:
-                cellHeight = 600;
-                break;
-                
-            default:
-                break;
-            }
-            
-            size = CGSizeMake(currentCollectionView.frame.size.width - (sectionInset.left + sectionInset.right), cellHeight);
-        }
-        
-        if (currentCollectionView.contentSize.height >= 120) {
-            currentCollectionView.contentSize = CGSizeMake(currentCollectionView.frame.size.width - (sectionInset.left + sectionInset.right), currentCollectionView.contentSize.height+size.height);
-        }
-        else{
-            currentCollectionView.contentSize = CGSizeMake(currentCollectionView.frame.size.width - (sectionInset.left + sectionInset.right), currentCollectionView.contentSize.height+size.height+120);
-        }
-        
+        size = CGSizeMake(currentCollectionView.frame.size.width-(sectionInset.left+sectionInset.right), 240);
+        // TODO: Remove this as wont be dynamic for cells
+//        if indexPath.item == 0{
+//            size = CGSizeMake(currentCollectionView.frame.size.width-(sectionInset.left+sectionInset.right), 240);
+//        }
+//        else if (indexPath.item == 2) {
+//            
+//            var deviceHeight:CGFloat = UIScreen.mainScreen().bounds.size.height;
+//            var cellHeight:CGFloat = 320;
+//            
+//            size = CGSizeMake(currentCollectionView.frame.size.width - (sectionInset.left + sectionInset.right), cellHeight);
+//        }
+//        
+//        if (currentCollectionView.contentSize.height >= 120) {
+//            currentCollectionView.contentSize = CGSizeMake(currentCollectionView.frame.size.width - (sectionInset.left + sectionInset.right), currentCollectionView.contentSize.height+size.height);
+//        }
+//        else{
+//            currentCollectionView.contentSize = CGSizeMake(currentCollectionView.frame.size.width - (sectionInset.left + sectionInset.right), currentCollectionView.contentSize.height+size.height+120);
+//        }
+//        
         return size;
     }
     
@@ -162,5 +165,18 @@ class ProfileVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
         
     }
     
+    //TODO: If continued buildout remove static strings
+    // MARK: Private Util methods
+    private func populateDataSource() {
+        var aboutme        : [String] = ["About Me"];
+        var youdontknow    : [String] = ["Something You Don't Know About Me"];
+        var favoritespot   : [String] = ["Favorite Spot In The City"];
+        
+        settingsSections =
+            ["Profile" : aboutme,
+             "DontKnow" : youdontknow,
+             "Settings": favoritespot]
+        
+    }
 }
 

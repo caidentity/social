@@ -2,8 +2,12 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <mutableArray key="proxima_nova_light.ttf">
+            <string>ProximaNova-Light</string>
+        </mutableArray>
         <mutableArray key="proxima_nova_reg.ttf">
             <string>ProximaNova-Regular</string>
         </mutableArray>
@@ -22,20 +26,29 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="D1V-aL-Nw7">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="26" y="0.0" width="548" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <collectionViewLayout key="collectionViewLayout" id="iwN-de-RWp" customClass="ProgileHeaderLayout" customModule="Social"/>
+                                <collectionViewLayout key="collectionViewLayout" id="iwN-de-RWp" customClass="ProfileHeaderLayout" customModule="Social"/>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="kReusableCollectionViewCell1" id="8de-th-cdb">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ProfileTableCell" id="8de-th-cdb" customClass="ProfileTableCell" customModule="Social">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="151"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Body Copy will soon go here will need to hook in and make sure is working great. But soon it will show up" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kUL-6N-bUC">
+                                                    <rect key="frame" x="16" y="64" width="380" height="79"/>
+                                                    <fontDescription key="fontDescription" name="ProximaNova-Light" family="Proxima Nova" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="settings-workingon" translatesAutoresizingMaskIntoConstraints="NO" id="pNL-6t-HwT">
+                                                    <rect key="frame" x="20" y="11" width="40" height="40"/>
+                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cell 1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CcN-5Y-0HG">
-                                                    <rect key="frame" x="18" y="9" width="169" height="32"/>
-                                                    <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="20"/>
+                                                    <rect key="frame" x="73" y="16" width="466" height="32"/>
+                                                    <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="22"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -43,7 +56,10 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <size key="customSize" width="600" height="50"/>
+                                        <size key="customSize" width="600" height="151"/>
+                                        <connections>
+                                            <outlet property="ProfileRowNameLabel" destination="CcN-5Y-0HG" id="Otc-R3-Wpc"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
@@ -54,11 +70,19 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="D1V-aL-Nw7" firstAttribute="leading" secondItem="gus-hQ-gky" secondAttribute="leadingMargin" constant="10" id="95l-bI-cvO"/>
                             <constraint firstItem="D1V-aL-Nw7" firstAttribute="top" secondItem="gus-hQ-gky" secondAttribute="top" id="DnR-pV-w9O"/>
                             <constraint firstItem="D1V-aL-Nw7" firstAttribute="leading" secondItem="gus-hQ-gky" secondAttribute="leading" id="KQ9-22-8YL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="D1V-aL-Nw7" secondAttribute="trailing" constant="10" id="aPd-eh-V34"/>
                             <constraint firstAttribute="trailing" secondItem="D1V-aL-Nw7" secondAttribute="trailing" id="kYl-MX-0gR"/>
                             <constraint firstItem="yP8-oE-Uxr" firstAttribute="top" secondItem="D1V-aL-Nw7" secondAttribute="bottom" id="mDD-9A-L9M"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="KQ9-22-8YL"/>
+                                <exclude reference="kYl-MX-0gR"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="currentCollectionView" destination="D1V-aL-Nw7" id="wWo-wj-w6f"/>
@@ -69,4 +93,7 @@
             <point key="canvasLocation" x="140" y="127"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="settings-workingon" width="27" height="27"/>
+    </resources>
 </document>
