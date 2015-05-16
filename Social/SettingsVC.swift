@@ -6,95 +6,129 @@
 //  Copyright (c) 2015 Craig Aucutt. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
-class SettingsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
-
-    var settingsSections = [String : [String]]()
-    let SettingsCellReuseIdentifier = "SettingsTableCell"
-    let SettingsStickyHeaderReuseIdentifier = "SettingsHeader"
-    let StickyHeaderViewIdentifier = "SettingsStickyHeader"
-    let stickyheaderBackgroundColor = UIColor(red: 219.0/255, green:219.0/255, blue:219.0/255, alpha:0.8)
-    let SettingsStickyHeaderHeight = 40.0
-
-    @IBOutlet weak var collectionView: UICollectionView?
-
+class SettingsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    @IBOutlet var tableView: UITableView?
+    
+    struct STableCell {
+        let name: String
+        let settingicon: String
+        //let vc: String
+    }
+    var STableCells = [STableCell]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Register header suppplementary view
-        let stickyHeaderViewNib = UINib(nibName: StickyHeaderViewIdentifier, bundle: nil)
-        collectionView?.registerNib(stickyHeaderViewNib, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: SettingsStickyHeaderReuseIdentifier)
-
-        title = "Settings"
-
-        // Populate sample data. This will mostly be a call to data provider which either returns back with cached datas
-        // or makes a network request to get fresh data
-        populateDataSource()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-
-    // MARK: UICollectionViewDataSource methods
-    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
-        return settingsSections.count;
-    }
-
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        let SettingsItemKeys = Array(settingsSections.keys)
-        let sectionKeyAtSection = SettingsItemKeys[section]
-        let SettingsItemArray = settingsSections[sectionKeyAtSection]
-        return SettingsItemArray?.count ?? 0;
-    }
-
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        var cell = collectionView.dequeueReusableCellWithReuseIdentifier(SettingsCellReuseIdentifier, forIndexPath: indexPath) as! SettingsTableCell
-        let SettingsItemKeys = Array(settingsSections.keys)
-        let sectionKeyAtSection = SettingsItemKeys[indexPath.section]
-        let SettingsItemArray = settingsSections[sectionKeyAtSection]
-        if let SettingsRowName = SettingsItemArray?[indexPath.row] {
-            cell.setUpCellWithSettingsRowName(SettingsRowName)
-        }
-        return cell
-    }
-
-    func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView {
-        var supplementaryView = collectionView.dequeueReusableSupplementaryViewOfKind(UICollectionElementKindSectionHeader, withReuseIdentifier: SettingsStickyHeaderReuseIdentifier, forIndexPath: indexPath) as! SettingsStickyHeader
-        let keys = Array(settingsSections.keys)
-        supplementaryView.setupStickyHeaderView(keys[indexPath.section])
-        return supplementaryView
-    }
-
-    // MARK: UICollectionViewDelegateFlowLayout methods
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        let width = CGRectGetWidth(collectionView.bounds)
-        return CGSizeMake(collectionView.frame.size.width, CGFloat(SettingsStickyHeaderHeight))
-    }
-
-    //TODO: Finish getting this implimented
-    // Direct to Dummy Settings Input VC
-    func goToSettingsInputVC()
-    {
-        let storyboard = UIStoryboard(name: "SettingsInputVC", bundle: nil)
-        let vc = storyboard.instantiateViewControllerWithIdentifier("SettingsInputVC") as! UIViewController
+        // Do any additional setup after loading the view, typically from a nib.
         
-        let nav = UINavigationController(rootViewController: SettingsInputVC())
-        nav.modalPresentationStyle = UIModalPresentationStyle.OverFullScreen
-        self.presentViewController(nav, animated: true, completion: nil)
+        self.title = "Settings"
+    
+        initializeTheSTableCells()
+        
+        // Add LeftNav Button.
+        self.addLeftNavItem()
     }
     
-    // MARK: Private Util methods
-    private func populateDataSource() {
-        var profilesettings : [String] = ["What I'm Working On", "About Me", "My Favorite Things"];
-        var generalsettings : [String] = ["My Name", "My Title", "Email Address", "Password"];
-
-        settingsSections =
-            ["Profile" : profilesettings,
-                "Settings": generalsettings]
+    // Add Barbutton
+    func addLeftNavItem()
+    {
+        
+        // hide default navigation bar button item
+        self.navigationItem.rightBarButtonItem = nil;
+        self.navigationItem.hidesBackButton = true;
+        
+        let buttonBack: UIButton = UIButton.buttonWithType(UIButtonType.Custom) as! UIButton
+        buttonBack.frame = CGRectMake(0, 0, 20, 40)
+        buttonBack.setImage(UIImage(named:"navbar-dismiss"), forState: UIControlState.Normal)
+        buttonBack.addTarget(self, action: "leftNavButtonClick:", forControlEvents: UIControlEvents.TouchUpInside)
+        
+        var leftBarButtonItem: UIBarButtonItem = UIBarButtonItem(customView: buttonBack)
+        
+        self.navigationItem.setLeftBarButtonItem(leftBarButtonItem, animated: false)
         
     }
-}
+    
+    // Right Barbutton Pressed
+    func leftNavButtonClick(sender:UIButton!)
+    {
+        
+        self.dismissViewControllerAnimated(true, completion: nil)
+        
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+        
+    }
+    
+    func initializeTheSTableCells() {
+        self.STableCells = [STableCell(name: "Email Address", settingicon: "settings-email"),
+            STableCell(name: "Change Password", settingicon: "settings-password"),
+            STableCell(name: "Change Title", settingicon: "settings-workingon"),
+            STableCell(name: "What I'm Working On", settingicon: "settings-workingon"),
+            STableCell(name: "Edit Profile", settingicon: "settings-workingon"),
+            STableCell(name: "Logout", settingicon: "settings-workingon")]
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let identifier: String = "SettingsTableCell"
+        
+        var cell: SettingsTableCell! = tableView.dequeueReusableCellWithIdentifier(identifier) as? SettingsTableCell
+        
+        if cell == nil {
+            cell = SettingsTableCell(style: UITableViewCellStyle.Value1, reuseIdentifier: identifier)
+        }
+        
+        cell!.nameLabel!.text = STableCells[indexPath.row].name
+        cell!.settingiconImageView!.image = UIImage(named:STableCells[indexPath.row].settingicon)
+        
+        //Some Styling Here
+        cell!.nameLabel!.textColor = UIColor.TWGray7()
+        cell!.nameLabel!.font = UIFont.mySystemFontOfSize(17)
 
+        return cell!
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return STableCells.count
+    }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        
+        return 78.0
+    }
+    
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        
+        STableCells.removeAtIndex(indexPath.row)
+        
+        tableView.reloadData()
+        
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "SettingsDetailVC" {
+            let index = self.tableView?.indexPathForSelectedRow()
+            var destinationViewController: SettingsDetailVC = segue.destinationViewController as! SettingsDetailVC
+            
+            destinationViewController.nameString = STableCells[index!.row].name
+            destinationViewController.imageName = STableCells[index!.row].settingicon
+        }
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        //        var cell: UITableViewCell = tableView.cellForRowAtIndexPath(indexPath)!
+        //        if cell.accessoryType == UITableViewCellAccessoryType.Checkmark {
+        //            cell.accessoryType = UITableViewCellAccessoryType.None
+        //        } else {
+        //            cell.accessoryType = UITableViewCellAccessoryType.Checkmark
+        //        }
+        //        //let alert: UIAlertView = UIAlertView(title: "Message", message: STableCells[indexPath.row], delegate: nil, cancelButtonTitle: "OKAY")
+        //        //alert.show()
+    }
+    
+    
+}

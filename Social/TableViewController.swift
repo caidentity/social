@@ -43,10 +43,10 @@ class TableViewController: UITableViewController
         model.appendData(20)
         tableView.reloadData()
         
-        // Add RightNavbar Button.
+        // Add RightNav Button.
         self.addRightNavItem()
 
-        // Add RightNavbar Button.
+        // Add LeftNav Button.
         self.addLeftNavItem()
 
     }
@@ -59,7 +59,7 @@ class TableViewController: UITableViewController
         self.navigationItem.hidesBackButton = true;
         
         let buttonBack: UIButton = UIButton.buttonWithType(UIButtonType.Custom) as! UIButton
-        buttonBack.frame = CGRectMake(0, 0, 40, 40)
+        buttonBack.frame = CGRectMake(0, 0, 20, 40)
         buttonBack.setImage(UIImage(named:"navbar-post"), forState: UIControlState.Normal)
         buttonBack.addTarget(self, action: "rightNavButtonClick:", forControlEvents: UIControlEvents.TouchUpInside)
         
@@ -72,12 +72,10 @@ class TableViewController: UITableViewController
     func rightNavButtonClick(sender:UIButton!)
     {
         
-        let storyboard = UIStoryboard(name: "SettingsVC", bundle: nil)
-        let vc = storyboard.instantiateViewControllerWithIdentifier("SettingsVC") as! UIViewController
-        self.presentViewController(vc, animated: true, completion: nil)
+        let navController = UIStoryboard(name: "SettingsVC", bundle: nil).instantiateInitialViewController() as! UIViewController
         
-        let navController                           = UINavigationController(rootViewController: vc)
-        navController.navigationBar.translucent     = false
+        navController.modalPresentationStyle = UIModalPresentationStyle.OverFullScreen
+        presentViewController(navController, animated: true, completion: nil)
         
         self.navigationController?.popViewControllerAnimated(true)
         
@@ -91,7 +89,7 @@ class TableViewController: UITableViewController
         self.navigationItem.hidesBackButton = true;
         
         let buttonBack: UIButton = UIButton.buttonWithType(UIButtonType.Custom) as! UIButton
-        buttonBack.frame = CGRectMake(0, 0, 40, 40)
+        buttonBack.frame = CGRectMake(0, 0, 20, 40)
         buttonBack.setImage(UIImage(named:"navbar-settings"), forState: UIControlState.Normal)
         buttonBack.addTarget(self, action: "leftNavButtonClick:", forControlEvents: UIControlEvents.TouchUpInside)
         
@@ -104,13 +102,11 @@ class TableViewController: UITableViewController
     func leftNavButtonClick(sender:UIButton!)
     {
         
-        let storyboard = UIStoryboard(name: "SettingsVC", bundle: nil)
-        let vc = storyboard.instantiateViewControllerWithIdentifier("SettingsVC") as! UIViewController
-        self.presentViewController(vc, animated: true, completion: nil)
-        
-        let navController                           = UINavigationController(rootViewController: vc)
-        navController.navigationBar.translucent     = false
-        
+        let navController = UIStoryboard(name: "SettingsVC", bundle: nil).instantiateInitialViewController() as! UIViewController
+
+        navController.modalPresentationStyle = UIModalPresentationStyle.OverFullScreen
+        presentViewController(navController, animated: true, completion: nil)
+
         self.navigationController?.popViewControllerAnimated(true)
         
     }

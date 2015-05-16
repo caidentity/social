@@ -205,3 +205,11 @@ extension MasterViewController : UITabBarControllerDelegate
         }
     }
 }
+
+extension MasterViewController : UINavigationControllerDelegate
+{
+    func navigationControllerSupportedInterfaceOrientations(navigationController: UINavigationController) -> Int
+    {
+        return Int(UIInterfaceOrientationMask.Portrait.rawValue)
+    }
+}

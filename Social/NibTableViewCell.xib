@@ -13,14 +13,14 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="CellIdentifier" rowHeight="200" id="Y7n-L6-IzP" customClass="NibTableViewCell" customModule="Social" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="398" height="187"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="CellIdentifier" rowHeight="227" id="Y7n-L6-IzP" customClass="NibTableViewCell" customModule="Social" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="398" height="214"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Y7n-L6-IzP" id="2eC-KE-sJB">
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card-stream" translatesAutoresizingMaskIntoConstraints="NO" id="vUy-OG-Ix5">
-                        <rect key="frame" x="0.0" y="1" width="398" height="186"/>
+                        <rect key="frame" x="0.0" y="1" width="398" height="213"/>
                     </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ojb-dc-fMR" userLabel="Header">
                         <rect key="frame" x="8" y="8" width="382" height="61"/>
@@ -57,7 +57,7 @@
                                 <rect key="frame" x="63" y="30" width="304" height="20"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.67455339431762695" green="0.70763182640075684" blue="0.76780837774276733" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="eF8-5D-K0d">
@@ -76,8 +76,15 @@
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                     </textView>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" placeholderIntrinsicWidth="290" placeholderIntrinsicHeight="20" text="2 People Like This" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZB7-to-D4R">
+                        <rect key="frame" x="12" y="136" width="290" height="20"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                        <color key="textColor" red="0.67455339431762695" green="0.70763182640075684" blue="0.76780837774276733" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GO7-XL-pdL" userLabel="action_row">
-                        <rect key="frame" x="2" y="138" width="393" height="46"/>
+                        <rect key="frame" x="2" y="165" width="393" height="46"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eiK-sp-Re2">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="1"/>
@@ -92,7 +99,7 @@
                                     <constraint firstAttribute="width" constant="62" id="5lr-3m-byw"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="14"/>
-                                <inset key="imageEdgeInsets" minX="-6" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="-10" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="Reply" image="post-comment">
                                     <color key="titleColor" red="0.18627458810806274" green="0.31874433159828186" blue="0.46412187814712524" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -107,7 +114,7 @@
                                     <constraint firstAttribute="width" constant="56" id="QeY-zc-c19"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="14"/>
-                                <inset key="imageEdgeInsets" minX="-6" minY="-2" maxX="0.0" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="-10" minY="-2" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="Like" image="post-like">
                                     <color key="titleColor" red="0.18627458810806274" green="0.31874433159828186" blue="0.46412187814712524" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -132,9 +139,10 @@
                 </subviews>
                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 <constraints>
+                    <constraint firstItem="ZB7-to-D4R" firstAttribute="leading" secondItem="2eC-KE-sJB" secondAttribute="leadingMargin" constant="4" id="0ly-l8-GDz"/>
                     <constraint firstItem="Ojb-dc-fMR" firstAttribute="top" secondItem="2eC-KE-sJB" secondAttribute="topMargin" id="7EI-WN-ljb"/>
                     <constraint firstAttribute="bottomMargin" secondItem="vUy-OG-Ix5" secondAttribute="bottom" constant="-9" id="8B8-if-dyP"/>
-                    <constraint firstItem="GO7-XL-pdL" firstAttribute="top" secondItem="Nx5-tF-bw7" secondAttribute="bottom" constant="9" id="8dK-PF-R39"/>
+                    <constraint firstItem="GO7-XL-pdL" firstAttribute="top" secondItem="Nx5-tF-bw7" secondAttribute="bottom" constant="36" id="8dK-PF-R39"/>
                     <constraint firstItem="GO7-XL-pdL" firstAttribute="leading" secondItem="2eC-KE-sJB" secondAttribute="leadingMargin" constant="-6" id="BLn-Cv-Mdc"/>
                     <constraint firstItem="Nx5-tF-bw7" firstAttribute="trailing" secondItem="2eC-KE-sJB" secondAttribute="trailingMargin" constant="-12" id="I0H-dc-RDR"/>
                     <constraint firstItem="GO7-XL-pdL" firstAttribute="bottom" secondItem="2eC-KE-sJB" secondAttribute="bottomMargin" constant="6" id="JcD-Sf-T1h"/>
@@ -145,6 +153,7 @@
                     <constraint firstItem="Nx5-tF-bw7" firstAttribute="leading" secondItem="2eC-KE-sJB" secondAttribute="leadingMargin" id="cWc-eu-8Ou"/>
                     <constraint firstItem="Ojb-dc-fMR" firstAttribute="leading" secondItem="2eC-KE-sJB" secondAttribute="leadingMargin" id="ji1-Au-GyJ"/>
                     <constraint firstItem="vUy-OG-Ix5" firstAttribute="leading" secondItem="2eC-KE-sJB" secondAttribute="leadingMargin" constant="-8" id="mty-BA-yo9"/>
+                    <constraint firstItem="ZB7-to-D4R" firstAttribute="top" secondItem="Nx5-tF-bw7" secondAttribute="bottom" constant="7" id="ow0-az-IdL"/>
                     <constraint firstItem="Ojb-dc-fMR" firstAttribute="trailing" secondItem="2eC-KE-sJB" secondAttribute="trailingMargin" id="tgt-3N-BsO"/>
                 </constraints>
             </tableViewCellContentView>
@@ -156,7 +165,7 @@
                 <outlet property="titleLabel" destination="e34-1u-xXd" id="9WJ-z8-rg8"/>
                 <outlet property="userAvatar" destination="eF8-5D-K0d" id="erZ-c0-d6W"/>
             </connections>
-            <point key="canvasLocation" x="326" y="249.5"/>
+            <point key="canvasLocation" x="326" y="263"/>
         </tableViewCell>
     </objects>
     <resources>
