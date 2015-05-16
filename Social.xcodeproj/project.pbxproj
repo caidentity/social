@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		445DE8A81B06A7FF00C15982 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445DE8A71B06A7FF00C15982 /* Helpers.swift */; };
+		445DE8AA1B06AA4200C15982 /* ProfileTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445DE8A91B06AA4200C15982 /* ProfileTableVC.swift */; };
 		446691921B01889C00C2DC15 /* SettingsInputVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446691911B01889C00C2DC15 /* SettingsInputVC.swift */; };
 		446691961B019B9D00C2DC15 /* SettingsTableLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446691951B019B9D00C2DC15 /* SettingsTableLayout.swift */; };
 		446691AB1B01A77D00C2DC15 /* proxima_nova_black_it.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4466919D1B01A57800C2DC15 /* proxima_nova_black_it.ttf */; };
@@ -39,13 +41,8 @@
 		4485AF8A1AFFBC5B005CCF3D /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4485AF7A1AFFBC5B005CCF3D /* TableViewController.swift */; };
 		4485AF8B1AFFBC5B005CCF3D /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4485AF7B1AFFBC5B005CCF3D /* UIColorExtension.swift */; };
 		4485AF8C1AFFBC5B005CCF3D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4485AF7C1AFFBC5B005CCF3D /* ViewController.swift */; };
-		44CA4ED51B02A0FE002C426C /* CollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44CA4ED41B02A0FE002C426C /* CollectionHeaderView.xib */; };
-		44CA4ED71B02A12A002C426C /* ProfileHeaderLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CA4ED61B02A12A002C426C /* ProfileHeaderLayout.swift */; };
 		44D29B7A1B02A732007B2BB7 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D29B791B02A732007B2BB7 /* ProfileVC.swift */; };
 		44D29B7C1B02A78B007B2BB7 /* ProfileVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44D29B7B1B02A78B007B2BB7 /* ProfileVC.storyboard */; };
-		44E252C41B02F9E100AA6A88 /* ProfileStickyHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E252C11B02F9E100AA6A88 /* ProfileStickyHeader.swift */; };
-		44E252C51B02F9E100AA6A88 /* ProfileStickyHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44E252C21B02F9E100AA6A88 /* ProfileStickyHeader.xib */; };
-		44E252C61B02F9E100AA6A88 /* ProfileTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E252C31B02F9E100AA6A88 /* ProfileTableCell.swift */; };
 		44FE93461AFFC3D2008CA73E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44FE93441AFFC3D2008CA73E /* LaunchScreen.xib */; };
 		44FE93471AFFC3D2008CA73E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44FE93451AFFC3D2008CA73E /* Main.storyboard */; };
 		44FE93491AFFD466008CA73E /* Model.swift in Resources */ = {isa = PBXBuildFile; fileRef = 49E1BCA71AE69CCA00FD0AB6 /* Model.swift */; };
@@ -69,6 +66,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		445DE8A71B06A7FF00C15982 /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		445DE8A91B06AA4200C15982 /* ProfileTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableVC.swift; sourceTree = "<group>"; };
 		446691911B01889C00C2DC15 /* SettingsInputVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsInputVC.swift; sourceTree = "<group>"; };
 		446691951B019B9D00C2DC15 /* SettingsTableLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableLayout.swift; sourceTree = "<group>"; };
 		4466919D1B01A57800C2DC15 /* proxima_nova_black_it.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = proxima_nova_black_it.ttf; path = Fonts/proxima_nova_black_it.ttf; sourceTree = "<group>"; };
@@ -101,13 +100,8 @@
 		4485AF7A1AFFBC5B005CCF3D /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableViewController.swift; path = Social/TableViewController.swift; sourceTree = SOURCE_ROOT; };
 		4485AF7B1AFFBC5B005CCF3D /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIColorExtension.swift; path = Social/UIColorExtension.swift; sourceTree = SOURCE_ROOT; };
 		4485AF7C1AFFBC5B005CCF3D /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = Social/ViewController.swift; sourceTree = SOURCE_ROOT; };
-		44CA4ED41B02A0FE002C426C /* CollectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionHeaderView.xib; sourceTree = "<group>"; };
-		44CA4ED61B02A12A002C426C /* ProfileHeaderLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileHeaderLayout.swift; sourceTree = "<group>"; };
 		44D29B791B02A732007B2BB7 /* ProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		44D29B7B1B02A78B007B2BB7 /* ProfileVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProfileVC.storyboard; sourceTree = "<group>"; };
-		44E252C11B02F9E100AA6A88 /* ProfileStickyHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileStickyHeader.swift; sourceTree = "<group>"; };
-		44E252C21B02F9E100AA6A88 /* ProfileStickyHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileStickyHeader.xib; sourceTree = "<group>"; };
-		44E252C31B02F9E100AA6A88 /* ProfileTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableCell.swift; sourceTree = "<group>"; };
 		44FE93441AFFC3D2008CA73E /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		44FE93451AFFC3D2008CA73E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		44FE934D1AFFD4DE008CA73E /* UIFontExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIFontExtensions.swift; sourceTree = "<group>"; };
@@ -196,23 +190,12 @@
 		44D29B781B02A70E007B2BB7 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				44CA4ED41B02A0FE002C426C /* CollectionHeaderView.xib */,
-				44CA4ED61B02A12A002C426C /* ProfileHeaderLayout.swift */,
-				44E252C01B02F96700AA6A88 /* Table */,
 				44D29B791B02A732007B2BB7 /* ProfileVC.swift */,
+				445DE8A91B06AA4200C15982 /* ProfileTableVC.swift */,
+				445DE8A71B06A7FF00C15982 /* Helpers.swift */,
 				44D29B7B1B02A78B007B2BB7 /* ProfileVC.storyboard */,
 			);
 			name = Profile;
-			sourceTree = "<group>";
-		};
-		44E252C01B02F96700AA6A88 /* Table */ = {
-			isa = PBXGroup;
-			children = (
-				44E252C11B02F9E100AA6A88 /* ProfileStickyHeader.swift */,
-				44E252C21B02F9E100AA6A88 /* ProfileStickyHeader.xib */,
-				44E252C31B02F9E100AA6A88 /* ProfileTableCell.swift */,
-			);
-			name = Table;
 			sourceTree = "<group>";
 		};
 		44FE934F1AFFD5A1008CA73E /* Extensions */ = {
@@ -404,7 +387,6 @@
 				446691B81B01A77D00C2DC15 /* proxima_nova_xbold.ttf in Resources */,
 				44FE93491AFFD466008CA73E /* Model.swift in Resources */,
 				447818A71AFFBDED00CF0DF1 /* Info.plist in Resources */,
-				44E252C51B02F9E100AA6A88 /* ProfileStickyHeader.xib in Resources */,
 				44FE93471AFFC3D2008CA73E /* Main.storyboard in Resources */,
 				44FE935B1B001865008CA73E /* SettingsVC.storyboard in Resources */,
 				44FE93591B001865008CA73E /* SettingsStickyHeader.xib in Resources */,
@@ -412,7 +394,6 @@
 				4485AF881AFFBC5B005CCF3D /* NibTableViewCell.xib in Resources */,
 				4485AF831AFFBC5B005CCF3D /* Images.xcassets in Resources */,
 				4485AF891AFFBC5B005CCF3D /* TableViewController.storyboard in Resources */,
-				44CA4ED51B02A0FE002C426C /* CollectionHeaderView.xib in Resources */,
 				4485AF801AFFBC5B005CCF3D /* FeedDetailCell.xib in Resources */,
 				44FE93461AFFC3D2008CA73E /* LaunchScreen.xib in Resources */,
 				4485AF841AFFBC5B005CCF3D /* Info.plist in Resources */,
@@ -434,8 +415,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				44FE934A1AFFD477008CA73E /* Model.swift in Sources */,
-				44E252C61B02F9E100AA6A88 /* ProfileTableCell.swift in Sources */,
-				44E252C41B02F9E100AA6A88 /* ProfileStickyHeader.swift in Sources */,
+				445DE8AA1B06AA4200C15982 /* ProfileTableVC.swift in Sources */,
+				445DE8A81B06A7FF00C15982 /* Helpers.swift in Sources */,
 				446691961B019B9D00C2DC15 /* SettingsTableLayout.swift in Sources */,
 				4485AF8C1AFFBC5B005CCF3D /* ViewController.swift in Sources */,
 				44FE934E1AFFD4DE008CA73E /* UIFontExtensions.swift in Sources */,
@@ -449,7 +430,6 @@
 				4485AF8A1AFFBC5B005CCF3D /* TableViewController.swift in Sources */,
 				4485AF8B1AFFBC5B005CCF3D /* UIColorExtension.swift in Sources */,
 				44D29B7A1B02A732007B2BB7 /* ProfileVC.swift in Sources */,
-				44CA4ED71B02A12A002C426C /* ProfileHeaderLayout.swift in Sources */,
 				4485AF871AFFBC5B005CCF3D /* NibTableViewCell.swift in Sources */,
 				4485AF7D1AFFBC5B005CCF3D /* AppDelegate.swift in Sources */,
 			);

@@ -159,7 +159,6 @@ private extension MasterViewController
             self.presentViewController(vc, animated: true, completion: nil)
             
             let navController                           = UINavigationController(rootViewController: vc)
-            navController.navigationBar.translucent     = false
             
             return navController
         }
