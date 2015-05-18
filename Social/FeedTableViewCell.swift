@@ -1,5 +1,5 @@
 //
-//  NibTableViewCell.swift
+//  FeedTableViewCell.swift
 //  Social
 //
 //  Created by Craig Aucutt on 5/9/15.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NibTableViewCell: UITableViewCell
+class FeedTableViewCell: UITableViewCell
 {
     @IBOutlet weak var userAvatar: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
@@ -18,7 +18,7 @@ class NibTableViewCell: UITableViewCell
     
     @IBOutlet weak var headerHeightConstraint: NSLayoutConstraint!
         
-    var controller: TableViewController?
+    var controller: FeedVC?
     
     override func awakeFromNib()
     {

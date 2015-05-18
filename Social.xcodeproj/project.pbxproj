@@ -15,7 +15,6 @@
 		445DE8A81B06A7FF00C15982 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445DE8A71B06A7FF00C15982 /* Helpers.swift */; };
 		445DE8AA1B06AA4200C15982 /* ProfileTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445DE8A91B06AA4200C15982 /* ProfileTableVC.swift */; };
 		445DE8AC1B06FCEC00C15982 /* SettingsTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445DE8AB1B06FCEC00C15982 /* SettingsTableCell.swift */; };
-		446691921B01889C00C2DC15 /* SettingsDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446691911B01889C00C2DC15 /* SettingsDetailVC.swift */; };
 		446691AB1B01A77D00C2DC15 /* proxima_nova_black_it.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4466919D1B01A57800C2DC15 /* proxima_nova_black_it.ttf */; };
 		446691AC1B01A77D00C2DC15 /* proxima_nova_black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4466919E1B01A57800C2DC15 /* proxima_nova_black.ttf */; };
 		446691AD1B01A77D00C2DC15 /* proxima_nova_bold_it.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4466919F1B01A57800C2DC15 /* proxima_nova_bold_it.ttf */; };
@@ -44,10 +43,10 @@
 		4485AF831AFFBC5B005CCF3D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4485AF731AFFBC5B005CCF3D /* Images.xcassets */; };
 		4485AF841AFFBC5B005CCF3D /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4485AF741AFFBC5B005CCF3D /* Info.plist */; };
 		4485AF851AFFBC5B005CCF3D /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4485AF751AFFBC5B005CCF3D /* MasterViewController.swift */; };
-		4485AF871AFFBC5B005CCF3D /* NibTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4485AF771AFFBC5B005CCF3D /* NibTableViewCell.swift */; };
-		4485AF881AFFBC5B005CCF3D /* NibTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4485AF781AFFBC5B005CCF3D /* NibTableViewCell.xib */; };
-		4485AF891AFFBC5B005CCF3D /* TableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4485AF791AFFBC5B005CCF3D /* TableViewController.storyboard */; };
-		4485AF8A1AFFBC5B005CCF3D /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4485AF7A1AFFBC5B005CCF3D /* TableViewController.swift */; };
+		4485AF871AFFBC5B005CCF3D /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4485AF771AFFBC5B005CCF3D /* FeedTableViewCell.swift */; };
+		4485AF881AFFBC5B005CCF3D /* FeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4485AF781AFFBC5B005CCF3D /* FeedTableViewCell.xib */; };
+		4485AF891AFFBC5B005CCF3D /* FeedVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4485AF791AFFBC5B005CCF3D /* FeedVC.storyboard */; };
+		4485AF8A1AFFBC5B005CCF3D /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4485AF7A1AFFBC5B005CCF3D /* FeedVC.swift */; };
 		4485AF8B1AFFBC5B005CCF3D /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4485AF7B1AFFBC5B005CCF3D /* UIColorExtension.swift */; };
 		44D29B7A1B02A732007B2BB7 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D29B791B02A732007B2BB7 /* ProfileVC.swift */; };
 		44D29B7C1B02A78B007B2BB7 /* ProfileVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44D29B7B1B02A78B007B2BB7 /* ProfileVC.storyboard */; };
@@ -78,7 +77,6 @@
 		445DE8A71B06A7FF00C15982 /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		445DE8A91B06AA4200C15982 /* ProfileTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableVC.swift; sourceTree = "<group>"; };
 		445DE8AB1B06FCEC00C15982 /* SettingsTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableCell.swift; sourceTree = "<group>"; };
-		446691911B01889C00C2DC15 /* SettingsDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsDetailVC.swift; sourceTree = "<group>"; };
 		4466919D1B01A57800C2DC15 /* proxima_nova_black_it.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = proxima_nova_black_it.ttf; path = Fonts/proxima_nova_black_it.ttf; sourceTree = "<group>"; };
 		4466919E1B01A57800C2DC15 /* proxima_nova_black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = proxima_nova_black.ttf; path = Fonts/proxima_nova_black.ttf; sourceTree = "<group>"; };
 		4466919F1B01A57800C2DC15 /* proxima_nova_bold_it.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = proxima_nova_bold_it.ttf; path = Fonts/proxima_nova_bold_it.ttf; sourceTree = "<group>"; };
@@ -107,10 +105,10 @@
 		4485AF731AFFBC5B005CCF3D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Social/Images.xcassets; sourceTree = SOURCE_ROOT; };
 		4485AF741AFFBC5B005CCF3D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Social/Info.plist; sourceTree = SOURCE_ROOT; };
 		4485AF751AFFBC5B005CCF3D /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MasterViewController.swift; path = Social/MasterViewController.swift; sourceTree = SOURCE_ROOT; };
-		4485AF771AFFBC5B005CCF3D /* NibTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NibTableViewCell.swift; path = Social/NibTableViewCell.swift; sourceTree = SOURCE_ROOT; };
-		4485AF781AFFBC5B005CCF3D /* NibTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NibTableViewCell.xib; path = Social/NibTableViewCell.xib; sourceTree = SOURCE_ROOT; };
-		4485AF791AFFBC5B005CCF3D /* TableViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = TableViewController.storyboard; path = Social/TableViewController.storyboard; sourceTree = SOURCE_ROOT; };
-		4485AF7A1AFFBC5B005CCF3D /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableViewController.swift; path = Social/TableViewController.swift; sourceTree = SOURCE_ROOT; };
+		4485AF771AFFBC5B005CCF3D /* FeedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeedTableViewCell.swift; path = Social/FeedTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		4485AF781AFFBC5B005CCF3D /* FeedTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FeedTableViewCell.xib; path = Social/FeedTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		4485AF791AFFBC5B005CCF3D /* FeedVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = FeedVC.storyboard; path = Social/FeedVC.storyboard; sourceTree = SOURCE_ROOT; };
+		4485AF7A1AFFBC5B005CCF3D /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeedVC.swift; path = Social/FeedVC.swift; sourceTree = SOURCE_ROOT; };
 		4485AF7B1AFFBC5B005CCF3D /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIColorExtension.swift; path = Social/UIColorExtension.swift; sourceTree = SOURCE_ROOT; };
 		44D29B791B02A732007B2BB7 /* ProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		44D29B7B1B02A78B007B2BB7 /* ProfileVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProfileVC.storyboard; sourceTree = "<group>"; };
@@ -185,10 +183,10 @@
 		447818A31AFFBCF300CF0DF1 /* Feed */ = {
 			isa = PBXGroup;
 			children = (
-				4485AF7A1AFFBC5B005CCF3D /* TableViewController.swift */,
-				4485AF791AFFBC5B005CCF3D /* TableViewController.storyboard */,
-				4485AF771AFFBC5B005CCF3D /* NibTableViewCell.swift */,
-				4485AF781AFFBC5B005CCF3D /* NibTableViewCell.xib */,
+				4485AF7A1AFFBC5B005CCF3D /* FeedVC.swift */,
+				4485AF791AFFBC5B005CCF3D /* FeedVC.storyboard */,
+				4485AF771AFFBC5B005CCF3D /* FeedTableViewCell.swift */,
+				4485AF781AFFBC5B005CCF3D /* FeedTableViewCell.xib */,
 			);
 			name = Feed;
 			sourceTree = "<group>";
@@ -232,7 +230,6 @@
 		44FE93511B00173C008CA73E /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				446691911B01889C00C2DC15 /* SettingsDetailVC.swift */,
 				445DE8AB1B06FCEC00C15982 /* SettingsTableCell.swift */,
 				44FE93551B001865008CA73E /* SettingsVC.swift */,
 				44FE93561B001865008CA73E /* SettingsVC.storyboard */,
@@ -410,10 +407,10 @@
 				44FE93471AFFC3D2008CA73E /* Main.storyboard in Resources */,
 				440E312E1B07CD5B00D3531E /* GroupListVC.storyboard in Resources */,
 				44FE935B1B001865008CA73E /* SettingsVC.storyboard in Resources */,
-				4485AF881AFFBC5B005CCF3D /* NibTableViewCell.xib in Resources */,
+				4485AF881AFFBC5B005CCF3D /* FeedTableViewCell.xib in Resources */,
 				440E31331B08433900D3531E /* GroupFeedVC.storyboard in Resources */,
 				4485AF831AFFBC5B005CCF3D /* Images.xcassets in Resources */,
-				4485AF891AFFBC5B005CCF3D /* TableViewController.storyboard in Resources */,
+				4485AF891AFFBC5B005CCF3D /* FeedVC.storyboard in Resources */,
 				4485AF841AFFBC5B005CCF3D /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -444,12 +441,11 @@
 				44FE935A1B001865008CA73E /* SettingsVC.swift in Sources */,
 				4485AF851AFFBC5B005CCF3D /* MasterViewController.swift in Sources */,
 				447FE8031B07039B00F010BC /* DefaultTransitioner.swift in Sources */,
-				446691921B01889C00C2DC15 /* SettingsDetailVC.swift in Sources */,
-				4485AF8A1AFFBC5B005CCF3D /* TableViewController.swift in Sources */,
+				4485AF8A1AFFBC5B005CCF3D /* FeedVC.swift in Sources */,
 				440E312A1B07CCD100D3531E /* GroupListVC.swift in Sources */,
 				4485AF8B1AFFBC5B005CCF3D /* UIColorExtension.swift in Sources */,
 				44D29B7A1B02A732007B2BB7 /* ProfileVC.swift in Sources */,
-				4485AF871AFFBC5B005CCF3D /* NibTableViewCell.swift in Sources */,
+				4485AF871AFFBC5B005CCF3D /* FeedTableViewCell.swift in Sources */,
 				447FE8051B07039B00F010BC /* PushbackTransitioner.swift in Sources */,
 				447FE8041B07039B00F010BC /* PopUpTransitioner.swift in Sources */,
 				447FE8071B07039B00F010BC /* ZoomAlertTransitioner.swift in Sources */,

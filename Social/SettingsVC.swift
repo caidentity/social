@@ -106,17 +106,16 @@ class SettingsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         STableCells.removeAtIndex(indexPath.row)
         
         tableView.reloadData()
-        
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "SettingsDetailVC" {
-            let index = self.tableView?.indexPathForSelectedRow()
-            var destinationViewController: SettingsDetailVC = segue.destinationViewController as! SettingsDetailVC
-            
-            destinationViewController.nameString = STableCells[index!.row].name
-            destinationViewController.imageName = STableCells[index!.row].settingicon
-        }
+//        if segue.identifier == "SettingsDetailVC" {
+//            let index = self.tableView?.indexPathForSelectedRow()
+//            var destinationViewController: SettingsDetailVC = segue.destinationViewController as! SettingsDetailVC
+//            
+//            destinationViewController.nameString = STableCells[index!.row].name
+//            destinationViewController.imageName = STableCells[index!.row].settingicon
+//        }
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
@@ -130,6 +129,4 @@ class SettingsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         //        //let alert: UIAlertView = UIAlertView(title: "Message", message: STableCells[indexPath.row], delegate: nil, cancelButtonTitle: "OKAY")
         //        //alert.show()
     }
-    
-    
 }

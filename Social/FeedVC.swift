@@ -1,5 +1,5 @@
 //
-//  TableViewController.swift
+//  FeedVC.swift
 //  Social
 //
 //  Created by Craig Aucutt on 5/9/15.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TableViewController: UITableViewController
+class FeedVC: UITableViewController
 {
     let kCellIdentifier = "CellIdentifier"
     
@@ -32,7 +32,7 @@ class TableViewController: UITableViewController
         
         title = "Feed"
         
-        tableView.registerNib(UINib(nibName: "NibTableViewCell", bundle: NSBundle.mainBundle()), forCellReuseIdentifier: kCellIdentifier)
+        tableView.registerNib(UINib(nibName: "FeedTableViewCell", bundle: NSBundle.mainBundle()), forCellReuseIdentifier: kCellIdentifier)
         
         self.tableView.contentInset = UIEdgeInsets(top: 10, left: tableView.contentInset.bottom,
             bottom: 15, right: tableView.contentInset.right)
@@ -142,7 +142,7 @@ class TableViewController: UITableViewController
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
-        let cell = tableView.dequeueReusableCellWithIdentifier(kCellIdentifier) as! NibTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier(kCellIdentifier) as! FeedTableViewCell
         
         cell.configure(model.data[indexPath.row])
         cell.controller = self

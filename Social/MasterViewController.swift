@@ -128,12 +128,9 @@ private extension MasterViewController
         {
             
         case .FeedIndex:
-            // create the timeline
-            //let TableViewController = self._loadFeatureViewController(forFeatureName: "TableViewController")
-            //controller = TableViewController
-            
-            let storyboard = UIStoryboard(name: "TableViewController", bundle: nil)
-            let vc = storyboard.instantiateViewControllerWithIdentifier("TableViewController") as! UITableViewController
+            // create Feed
+            let storyboard = UIStoryboard(name: "FeedVC", bundle: nil)
+            let vc = storyboard.instantiateViewControllerWithIdentifier("FeedVC") as! UITableViewController
             self.presentViewController(vc, animated: true, completion: nil)
             
             let navController                           = UINavigationController(rootViewController: vc)
@@ -142,7 +139,7 @@ private extension MasterViewController
             return navController
 
         case .GroupIndex:
-            // create announcements
+            // create GroupList
             let storyboard = UIStoryboard(name: "GroupListVC", bundle: nil)
             let vc = storyboard.instantiateViewControllerWithIdentifier("GroupListVC") as! UIViewController
             self.presentViewController(vc, animated: true, completion: nil)
@@ -153,7 +150,7 @@ private extension MasterViewController
             return navController
 
         case .ProfileIndex:
-            // create announcements
+            // create Profile
             let storyboard = UIStoryboard(name: "ProfileVC", bundle: nil)
             let vc = storyboard.instantiateViewControllerWithIdentifier("ProfileVC") as! UIViewController
             self.presentViewController(vc, animated: true, completion: nil)

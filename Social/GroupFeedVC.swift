@@ -33,7 +33,7 @@ class GroupFeedVC: UITableViewController
         
         title = "Engineering Feed"
         
-        tableView.registerNib(UINib(nibName: "NibTableViewCell", bundle: NSBundle.mainBundle()), forCellReuseIdentifier: kCellIdentifier)
+        tableView.registerNib(UINib(nibName: "FeedTableViewCell", bundle: NSBundle.mainBundle()), forCellReuseIdentifier: kCellIdentifier)
         
         self.tableView.contentInset = UIEdgeInsets(top: 10, left: tableView.contentInset.bottom,
             bottom: 15, right: tableView.contentInset.right)
@@ -49,7 +49,6 @@ class GroupFeedVC: UITableViewController
         
         // Add LeftNav Button.
         self.addBackNavItem()
-
     }
     
     // Pops back button
@@ -128,7 +127,7 @@ class GroupFeedVC: UITableViewController
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
-        let cell = tableView.dequeueReusableCellWithIdentifier(kCellIdentifier) as! NibTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier(kCellIdentifier) as! FeedTableViewCell
         
         cell.configure(model.data[indexPath.row])
         //cell.controller = self
@@ -161,7 +160,6 @@ class GroupFeedVC: UITableViewController
         //load detail view controller
         //self.presentViewController(FeedDetailVC, animated: true, completion: nil)
     }
-    
 }
 
 

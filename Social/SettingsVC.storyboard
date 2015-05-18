@@ -72,7 +72,6 @@
                                         <connections>
                                             <outlet property="nameLabel" destination="kPi-Wg-w96" id="wbq-1j-1or"/>
                                             <outlet property="settingiconImageView" destination="66L-0l-9s2" id="nRP-tr-cCl"/>
-                                            <segue destination="Fui-3y-zVi" kind="show" identifier="SettingsDetailVC" id="JWc-f7-du2"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -108,55 +107,6 @@
                 </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="2755" y="426"/>
-        </scene>
-        <!--SettingsDetailVC-->
-        <scene sceneID="0hk-7x-VgG">
-            <objects>
-                <viewController restorationIdentifier="SettingsDetailVC" storyboardIdentifier="SettingsDetailVC" id="Fui-3y-zVi" userLabel="SettingsDetailVC" customClass="SettingsDetailVC" customModule="Social" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="psz-Jk-WUa"/>
-                        <viewControllerLayoutGuide type="bottom" id="UZY-04-Xa2"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="9cS-JI-Fuo">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6xv-zq-nb3">
-                                <rect key="frame" x="60" y="72" width="200" height="200"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Prep Time:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K9C-F8-h0g">
-                                <rect key="frame" x="16" y="357" width="93" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S1Q-b9-9V8">
-                                <rect key="frame" x="16" y="301" width="288" height="48"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wt0-o8-thE">
-                                <rect key="frame" x="117" y="357" width="91" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="iSk-v3-GnX"/>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                    <connections>
-                        <outlet property="imageView" destination="6xv-zq-nb3" id="L5o-dp-hel"/>
-                        <outlet property="nameLabel" destination="S1Q-b9-9V8" id="zS8-Sz-JMa"/>
-                        <outlet property="prepTime" destination="wt0-o8-thE" id="LEm-yZ-DpQ"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Tej-TC-NCl" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3495" y="426"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Phg-4n-nOi">
