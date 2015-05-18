@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--GroupListVC-->
+        <scene sceneID="OiQ-hi-G7C">
+            <objects>
+                <collectionViewController storyboardIdentifier="GroupListVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="AIr-XW-6Xn" userLabel="GroupListVC" customClass="GroupListVC" customModule="Social" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="rPK-Cd-VfK">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="0.0" id="3pZ-aU-3xm">
+                            <size key="itemSize" width="150" height="220"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GroupListCell" id="xAr-XK-dNK" userLabel="GroupListCell" customClass="GroupListCell" customModule="Social" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="150" height="220"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card-stream" translatesAutoresizingMaskIntoConstraints="NO" id="HWE-iV-IfL">
+                                            <rect key="frame" x="0.0" y="0.0" width="150" height="220"/>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ICD-xM-WAu">
+                                            <rect key="frame" x="16" y="16" width="118" height="118"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="ICD-xM-WAu" secondAttribute="height" multiplier="183:241" constant="28.398340248962654" id="tbQ-Ew-6wz"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Sample" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ia9-Gb-FqR">
+                                            <rect key="frame" x="8" y="148" width="134" height="25"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                            <color key="textColor" red="0.47604776069999999" green="0.43302370480000002" blue="0.48086144180000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="7 Members" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GjI-ba-S6D">
+                                            <rect key="frame" x="8" y="171" width="134" height="20"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                            <color key="textColor" red="0.47604776069999999" green="0.43302370480000002" blue="0.48086144180000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <color key="backgroundColor" red="0.99215686270000003" green="0.99215686270000003" blue="0.99215686270000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="GjI-ba-S6D" firstAttribute="trailing" secondItem="xAr-XK-dNK" secondAttribute="trailingMargin" id="1cA-cU-3Xx"/>
+                                    <constraint firstItem="ICD-xM-WAu" firstAttribute="trailing" secondItem="xAr-XK-dNK" secondAttribute="trailingMargin" constant="3" id="5xl-2j-KBc"/>
+                                    <constraint firstItem="Ia9-Gb-FqR" firstAttribute="top" secondItem="ICD-xM-WAu" secondAttribute="bottom" constant="14" id="7Ga-IF-LaC"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="HWE-iV-IfL" secondAttribute="bottom" constant="-8" id="Fvt-GI-Kit"/>
+                                    <constraint firstItem="ICD-xM-WAu" firstAttribute="leading" secondItem="xAr-XK-dNK" secondAttribute="leadingMargin" constant="8" id="Muy-WY-GNR"/>
+                                    <constraint firstItem="ICD-xM-WAu" firstAttribute="leading" secondItem="xAr-XK-dNK" secondAttribute="leadingMargin" constant="8" id="N4O-wQ-nGI"/>
+                                    <constraint firstItem="ICD-xM-WAu" firstAttribute="top" secondItem="xAr-XK-dNK" secondAttribute="topMargin" constant="-8" id="QN3-a8-4Da"/>
+                                    <constraint firstItem="GjI-ba-S6D" firstAttribute="top" secondItem="ICD-xM-WAu" secondAttribute="bottom" constant="37" id="R0w-2j-mSA"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="HWE-iV-IfL" secondAttribute="trailing" constant="-8" id="RyW-W3-Ibq"/>
+                                    <constraint firstItem="Ia9-Gb-FqR" firstAttribute="top" secondItem="ICD-xM-WAu" secondAttribute="bottom" constant="7" id="U68-63-9ao"/>
+                                    <constraint firstItem="GjI-ba-S6D" firstAttribute="leading" secondItem="xAr-XK-dNK" secondAttribute="leadingMargin" id="aLf-mm-ycd"/>
+                                    <constraint firstItem="Ia9-Gb-FqR" firstAttribute="leading" secondItem="xAr-XK-dNK" secondAttribute="leadingMargin" id="b2C-q6-DLi"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="ICD-xM-WAu" secondAttribute="trailing" constant="8" id="dD3-H6-pqF"/>
+                                    <constraint firstItem="Ia9-Gb-FqR" firstAttribute="trailing" secondItem="xAr-XK-dNK" secondAttribute="trailingMargin" id="i7F-ej-1lk"/>
+                                    <constraint firstItem="HWE-iV-IfL" firstAttribute="leading" secondItem="xAr-XK-dNK" secondAttribute="leadingMargin" constant="-8" id="jiY-mL-pUM"/>
+                                    <constraint firstItem="HWE-iV-IfL" firstAttribute="top" secondItem="xAr-XK-dNK" secondAttribute="topMargin" constant="-8" id="nVQ-vc-lZY"/>
+                                    <constraint firstItem="ICD-xM-WAu" firstAttribute="top" secondItem="xAr-XK-dNK" secondAttribute="topMargin" constant="8" id="zFd-DJ-Vq0"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="5xl-2j-KBc"/>
+                                        <exclude reference="QN3-a8-4Da"/>
+                                        <exclude reference="U68-63-9ao"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <outlet property="groupImage" destination="ICD-xM-WAu" id="j4E-oj-C7x"/>
+                                    <outlet property="groupLabel" destination="Ia9-Gb-FqR" id="Otl-SY-bOI"/>
+                                    <outlet property="membersLabel" destination="GjI-ba-S6D" id="OMd-YJ-iYy"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="AIr-XW-6Xn" id="vHk-lG-wne"/>
+                            <outlet property="delegate" destination="AIr-XW-6Xn" id="mAe-Fz-5Ds"/>
+                        </connections>
+                    </collectionView>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gUM-t9-jXn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1685" y="253"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="card-stream" width="9" height="9"/>
+    </resources>
+</document>

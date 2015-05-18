@@ -1,14 +1,15 @@
 //
-//  TableViewController.swift
+//  GroupFeedVC.swift
 //  Social
 //
-//  Created by Craig Aucutt on 5/9/15.
-//  Copyright (c) 2015 Craig Aucutt. All rights reserved.
+//  Created by Craig Aucutt on 5/16/15.
+//  Copyright (c) 2015 caidentity. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
-class TableViewController: UITableViewController
+class GroupFeedVC: UITableViewController
 {
     let kCellIdentifier = "CellIdentifier"
     
@@ -30,7 +31,7 @@ class TableViewController: UITableViewController
     {
         super.viewDidLoad()
         
-        title = "Feed"
+        title = "Engineering Feed"
         
         tableView.registerNib(UINib(nibName: "NibTableViewCell", bundle: NSBundle.mainBundle()), forCellReuseIdentifier: kCellIdentifier)
         
@@ -45,10 +46,27 @@ class TableViewController: UITableViewController
         
         // Add RightNav Button.
         self.addRightNavItem()
-
+        
         // Add LeftNav Button.
-        self.addLeftNavItem()
+        self.addBackNavItem()
 
+    }
+    
+    // Pops back button
+    func popToRoot(sender:UIBarButtonItem){
+        self.navigationController!.popToRootViewControllerAnimated(true)
+    }
+    
+    // Add Back Button
+    func addBackNavItem() {
+        navigationController!.setNavigationBarHidden(false, animated:true)
+        var myBackButton:UIButton = UIButton.buttonWithType(UIButtonType.Custom) as! UIButton
+        myBackButton.addTarget(self, action: "popToRoot:", forControlEvents: UIControlEvents.TouchUpInside)
+        myBackButton.setImage(UIImage(named:"navbar-back"), forState: UIControlState.Normal)
+        myBackButton.setTitleColor(UIColor.blueColor(), forState: UIControlState.Normal)
+        myBackButton.sizeToFit()
+        var myCustomBackButtonItem:UIBarButtonItem = UIBarButtonItem(customView: myBackButton)
+        self.navigationItem.leftBarButtonItem  = myCustomBackButtonItem
     }
     
     // Add Barbutton
@@ -82,39 +100,7 @@ class TableViewController: UITableViewController
         self.navigationController?.popViewControllerAnimated(true)
         
     }
-    
-    // Add Barbutton
-    func addLeftNavItem()
-    {
-        
-        // hide default navigation bar button item
-        self.navigationItem.leftBarButtonItem = nil;
-        self.navigationItem.hidesBackButton = true;
-        
-        let buttonSettings: UIButton = UIButton.buttonWithType(UIButtonType.Custom) as! UIButton
-        buttonSettings.frame = CGRectMake(0, 0, 20, 40)
-        buttonSettings.setImage(UIImage(named:"navbar-settings"), forState: UIControlState.Normal)
-        buttonSettings.addTarget(self, action: "leftNavButtonClick:", forControlEvents: UIControlEvents.TouchUpInside)
-        
-        var leftBarButtonItem: UIBarButtonItem = UIBarButtonItem(customView: buttonSettings)
-        
-        self.navigationItem.setLeftBarButtonItem(leftBarButtonItem, animated: false)
-        
-    }
-    
-    // Left Barbutton Pressed
-    func leftNavButtonClick(sender:UIButton!)
-    {
-        
-        let navController = UIStoryboard(name: "SettingsVC", bundle: nil).instantiateInitialViewController() as! UIViewController
 
-        navController.modalPresentationStyle = UIModalPresentationStyle.OverFullScreen
-        presentViewController(navController, animated: true, completion: nil)
-
-        self.navigationController?.popViewControllerAnimated(true)
-        
-    }
-    
     override func viewDidAppear(animated: Bool)
     {
         super.viewDidAppear(animated)
@@ -145,8 +131,8 @@ class TableViewController: UITableViewController
         let cell = tableView.dequeueReusableCellWithIdentifier(kCellIdentifier) as! NibTableViewCell
         
         cell.configure(model.data[indexPath.row])
-        cell.controller = self
-            
+        //cell.controller = self
+        
         return cell
     }
     
@@ -169,30 +155,30 @@ class TableViewController: UITableViewController
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
     {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
-   
+        
         //if let FeedDetailVC : FeedDetailVC = self.storyboard?.instantiateViewControllerWithIdentifier("FeedDetailVC") as? FeedDetailVC {
-                        
-            //load detail view controller
-            //self.presentViewController(FeedDetailVC, animated: true, completion: nil)
-        }
-
+        
+        //load detail view controller
+        //self.presentViewController(FeedDetailVC, animated: true, completion: nil)
     }
+    
+}
 
-    
-    /*override func tableView(tableView: UITableView!, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath!) -> CGFloat
-    {
-    // If you are just returning a constant value from this method, you should instead just set the table view's
-    // estimatedRowHeight property (in viewDidLoad or similar), which is even faster as the table view won't
-    // have to call this method for every row in the table view.
-    //
-    // Only implement this method if you have row heights that vary by extreme amounts and you notice the scroll indicator
-    // "jumping" as you scroll the table view when using a constant estimatedRowHeight. If you do implement this method,
-    // be sure to do as little work as possible to get a reasonably-accurate estimate.
-    
-    return 44.0
-    }*/
 
-    
+/*override func tableView(tableView: UITableView!, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath!) -> CGFloat
+{
+// If you are just returning a constant value from this method, you should instead just set the table view's
+// estimatedRowHeight property (in viewDidLoad or similar), which is even faster as the table view won't
+// have to call this method for every row in the table view.
+//
+// Only implement this method if you have row heights that vary by extreme amounts and you notice the scroll indicator
+// "jumping" as you scroll the table view when using a constant estimatedRowHeight. If you do implement this method,
+// be sure to do as little work as possible to get a reasonably-accurate estimate.
+
+return 44.0
+}*/
+
+
 //    func reloadCell(cell: UITableViewCell) {
 //        if let indexPath = tableView.indexPathForCell(cell) {
 //            if let index = find(expandedPaths, indexPath) {

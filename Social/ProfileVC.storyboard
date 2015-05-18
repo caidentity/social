@@ -24,16 +24,16 @@
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i0R-uu-DZ4">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="285"/>
-                                <color key="backgroundColor" red="0.26593896746635437" green="0.31377702951431274" blue="0.40096843242645264" alpha="0.48359374999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="375"/>
+                                <color key="backgroundColor" red="0.19691723585128784" green="0.26554808020591736" blue="0.39757958054542542" alpha="0.58925347222222224" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="285" id="SWN-Ck-Gq2"/>
+                                    <constraint firstAttribute="height" constant="375" id="SWN-Ck-Gq2"/>
                                 </constraints>
                             </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vFw-j5-iNV">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <connections>
-                                    <segue destination="QVX-pN-u2I" kind="embed" id="YWI-XO-Gl3"/>
+                                    <segue destination="QVX-pN-u2I" kind="embed" identifier="embedProfile" id="YWI-XO-Gl3"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -70,7 +70,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="O5v-yz-cWw">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="260"/>
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="274"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="zxK-lz-puG">
@@ -103,9 +103,18 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Product Designer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9GN-aQ-zNO">
-                                    <rect key="frame" x="0.0" y="189" width="320" height="18"/>
+                                    <rect key="frame" x="0.0" y="192" width="320" height="18"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="18" id="riK-zF-IZi"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Design Team" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sU0-0n-epa">
+                                    <rect key="frame" x="0.0" y="216" width="320" height="18"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="18" id="tLS-fw-tos"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -120,10 +129,13 @@
                                 <constraint firstItem="9GN-aQ-zNO" firstAttribute="leading" secondItem="O5v-yz-cWw" secondAttribute="leading" id="BBB-QC-6JG"/>
                                 <constraint firstAttribute="trailing" secondItem="poY-5v-0Wy" secondAttribute="trailing" id="BYd-0v-HIe"/>
                                 <constraint firstItem="poY-5v-0Wy" firstAttribute="leading" secondItem="O5v-yz-cWw" secondAttribute="leading" id="HA1-rj-gbA"/>
-                                <constraint firstItem="9GN-aQ-zNO" firstAttribute="top" secondItem="poY-5v-0Wy" secondAttribute="bottom" constant="3" id="MnS-9q-eKf"/>
+                                <constraint firstItem="sU0-0n-epa" firstAttribute="leading" secondItem="O5v-yz-cWw" secondAttribute="leading" id="HP9-lR-NbS"/>
+                                <constraint firstItem="9GN-aQ-zNO" firstAttribute="top" secondItem="poY-5v-0Wy" secondAttribute="bottom" constant="6" id="MnS-9q-eKf"/>
                                 <constraint firstItem="zxK-lz-puG" firstAttribute="leading" secondItem="O5v-yz-cWw" secondAttribute="leading" constant="20" symbolic="YES" id="TRo-eY-1Qw"/>
                                 <constraint firstAttribute="trailing" secondItem="9GN-aQ-zNO" secondAttribute="trailing" id="eoF-H0-VWX"/>
                                 <constraint firstAttribute="trailing" secondItem="zxK-lz-puG" secondAttribute="trailing" constant="20" symbolic="YES" id="fSz-rc-tru"/>
+                                <constraint firstAttribute="trailing" secondItem="sU0-0n-epa" secondAttribute="trailing" id="jUM-dH-aPc"/>
+                                <constraint firstItem="sU0-0n-epa" firstAttribute="top" secondItem="poY-5v-0Wy" secondAttribute="bottom" constant="30" id="oOR-YB-443"/>
                                 <constraint firstItem="9GN-aQ-zNO" firstAttribute="top" secondItem="poY-5v-0Wy" secondAttribute="bottom" constant="3" id="uME-Ti-1vt"/>
                                 <constraint firstItem="zxK-lz-puG" firstAttribute="centerX" secondItem="poY-5v-0Wy" secondAttribute="centerX" id="uPw-GS-FmU"/>
                             </constraints>
@@ -131,6 +143,7 @@
                                 <mask key="constraints">
                                     <exclude reference="TRo-eY-1Qw"/>
                                     <exclude reference="fSz-rc-tru"/>
+                                    <exclude reference="uME-Ti-1vt"/>
                                 </mask>
                             </variation>
                         </view>
@@ -202,6 +215,7 @@
                     </tableView>
                     <connections>
                         <outlet property="positionLabel" destination="9GN-aQ-zNO" id="PIf-tC-GI3"/>
+                        <outlet property="teamLabel" destination="sU0-0n-epa" id="ZKj-pm-Fol"/>
                         <outlet property="userLabel" destination="poY-5v-0Wy" id="CG8-9u-wco"/>
                     </connections>
                 </tableViewController>
@@ -211,8 +225,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="avatar" width="213" height="213"/>
-        <image name="profile-headerbgimg" width="366" height="243"/>
+        <image name="avatar" width="76" height="76"/>
+        <image name="profile-headerbgimg" width="320" height="193"/>
         <image name="profile-know" width="40" height="40"/>
     </resources>
 </document>

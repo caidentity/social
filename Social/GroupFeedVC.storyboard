@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+    </dependencies>
+    <scenes>
+        <!--GroupFeedVC-->
+        <scene sceneID="XV4-IU-zMH">
+            <objects>
+                <tableViewController storyboardIdentifier="GroupFeedVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="E8c-3T-t5P" userLabel="GroupFeedVC" customClass="GroupFeedVC" customModule="Social" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="yNo-XV-9q9">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="cD4-bJ-7xr">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cD4-bJ-7xr" id="bM4-91-qlG">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="E8c-3T-t5P" id="6b9-XR-cND"/>
+                            <outlet property="delegate" destination="E8c-3T-t5P" id="ryt-M2-iJP"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="Adz-uF-EeP"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="22U-cl-W6E" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="895" y="326"/>
+        </scene>
+    </scenes>
+</document>

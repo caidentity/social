@@ -12,7 +12,7 @@ enum TabBarItemIndex:Int
 {
     case FeedIndex          = 0
     case GroupIndex         = 1
-    case ProfileIndex      = 2
+    case ProfileIndex       = 2
     
     static let allValues    = [FeedIndex, GroupIndex, ProfileIndex]
     static let nameValues   = ["Feed", "Groups", "Profile"]
@@ -143,8 +143,8 @@ private extension MasterViewController
 
         case .GroupIndex:
             // create announcements
-            let storyboard = UIStoryboard(name: "TableViewController", bundle: nil)
-            let vc = storyboard.instantiateViewControllerWithIdentifier("TableViewController") as! UITableViewController
+            let storyboard = UIStoryboard(name: "GroupListVC", bundle: nil)
+            let vc = storyboard.instantiateViewControllerWithIdentifier("GroupListVC") as! UIViewController
             self.presentViewController(vc, animated: true, completion: nil)
             
             let navController                           = UINavigationController(rootViewController: vc)

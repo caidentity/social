@@ -18,7 +18,6 @@ class ProfileVC: UIViewController, UIScrollViewDelegate, SubScrollDelegate {
         super.viewDidLoad()
         UIApplication.sharedApplication().statusBarStyle = .LightContent
         self.navigationController?.navigationBarHidden = true;
-        
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -57,5 +56,4 @@ class ProfileVC: UIViewController, UIScrollViewDelegate, SubScrollDelegate {
             profileVC.delegate = self
         }
     }
-    
 }

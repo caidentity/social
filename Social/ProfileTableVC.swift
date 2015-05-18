@@ -22,20 +22,27 @@ class ProfileUpdate {
         self.name = name
         self.body = body
     }
-    
 }
 
 class ProfileTableVC: UITableViewController {
     
     @IBOutlet var userLabel: UILabel!
     @IBOutlet var positionLabel: UILabel!
+    @IBOutlet var teamLabel: UILabel!
 
     override func viewDidLoad() {
+        // Header UserLable
         userLabel.textColor = UIColor.whiteColor()
-        userLabel.font = UIFont.mysemiboldSystemFontOfSize(22)
+        userLabel.font = UIFont.mysemiboldSystemFontOfSize(23)
 
+        // Header UserLable
         positionLabel.textColor = UIColor.whiteColor()
-        positionLabel.font = UIFont.mySystemFontOfSize(15)
+        positionLabel.font = UIFont.mysemiboldSystemFontOfSize(15)
+        
+        // Header UserLable
+        teamLabel.textColor = UIColor.whiteColor()
+        teamLabel.font = UIFont.mysemiboldSystemFontOfSize(15)
+
     }
     
     var delegate: SubScrollDelegate!
@@ -44,17 +51,16 @@ class ProfileTableVC: UITableViewController {
         ProfileUpdate(icon: UIImage(named: "profile-place")!, name: "Favorite Spot In The City", body: "Stable Cafe"),
         ProfileUpdate(icon: UIImage(named: "profile-know")!, name: "Something You May Not Know", body: "Been doing design and frontend since was 13."),
     ]
-//    
-//    override func scrollViewDidScroll(scrollView: UIScrollView) {
-//        self.delegate.subScrollViewDidScroll(scrollView)
-//    }
+    
+    override func scrollViewDidScroll(scrollView: UIScrollView) {
+        self.delegate.subScrollViewDidScroll(scrollView)
+    }
     
     func getUpdate(indexPath: NSIndexPath) -> ProfileUpdate {
         return self.items[indexPath.row]
     }
     
     // Table methods
-    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items.count
     }
@@ -68,7 +74,6 @@ class ProfileTableVC: UITableViewController {
         cell.renderWithUpdate(getUpdate(indexPath))
         return cell
     }
-    
 }
 
 class ProfileUpdateCell: UITableViewCell {
@@ -88,5 +93,4 @@ class ProfileUpdateCell: UITableViewCell {
         bodyLabel.font = UIFont.mySystemFontOfSize(14)
 
     }
-    
 }

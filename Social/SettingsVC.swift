@@ -68,8 +68,8 @@ class SettingsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
             STableCell(name: "Change Password", settingicon: "settings-password"),
             STableCell(name: "Change Title", settingicon: "settings-workingon"),
             STableCell(name: "What I'm Working On", settingicon: "settings-workingon"),
-            STableCell(name: "Edit Profile", settingicon: "settings-workingon"),
-            STableCell(name: "Logout", settingicon: "settings-workingon")]
+            STableCell(name: "Edit Profile", settingicon: "settings-profile"),
+            STableCell(name: "Logout", settingicon: "settings-logout")]
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -92,6 +92,7 @@ class SettingsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
         return STableCells.count
     }
     
